@@ -121,12 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8917efdc0f9a77243afc971c90813a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castle: {fileID: 703986264316076922, guid: 5ae4b21e61546f744b518c6c2b9a4e85, type: 3}
   speed: 0.55
   damage: 7
   attackRate: 0.5
   health: 30
   armor: 0
+  explosionEffect: {fileID: 2683037322165241152, guid: 6900c81c84f1f42449189201f414d83a, type: 3}
 --- !u!61 &-6304446850468776531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,8 +156,8 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:

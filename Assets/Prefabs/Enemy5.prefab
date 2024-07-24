@@ -121,12 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8917efdc0f9a77243afc971c90813a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castle: {fileID: 703986264316076922, guid: 5ae4b21e61546f744b518c6c2b9a4e85, type: 3}
   speed: 0.5
   damage: 7
   attackRate: 0.5
   health: 70
   armor: 25
+  explosionEffect: {fileID: 2683037322165241152, guid: 6900c81c84f1f42449189201f414d83a, type: 3}
 --- !u!61 &9125880508798188990
 BoxCollider2D:
   m_ObjectHideFlags: 0
