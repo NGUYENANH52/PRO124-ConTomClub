@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -8,42 +8,38 @@ public class bulletScript : MonoBehaviour
     public float _speed;
     public float _lifeTime;
     public GameObject _effectBullet;
+    public int _damage; // Biến lưu trữ sát thương của viên đạn
     Rigidbody2D _rb;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //Check va cham
         _rb = GetComponent<Rigidbody2D>();
-
-        //Time to destroy Bullet 
         Destroy(this.gameObject, _lifeTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Bullet move
         _rb.velocity = transform.up * _speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Va chạm phát hiện với: " + other.gameObject.name);
+
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //Destroy Bullet
+            Debug.Log("Va chạm với quái!");
+
+            // Gây sát thương cho quái
+            EnemyMovement enemy = other.GetComponent<EnemyMovement>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(_damage);
+            }
+
             Destroy(this.gameObject);
-
-            //Instan Effect (Explore)
             GameObject effectExplore = Instantiate(_effectBullet, transform.position, Quaternion.identity);
-
-            //Destroy Explore
             Destroy(effectExplore, 0.1f);
-
-            //Find & destroy enemy
-            /*var name = other.attachedRigidbody.name;
-            Destroy(GameObject.Find(name), 0f);*/
-
         }
     }
 }
