@@ -477,7 +477,7 @@ MonoBehaviour:
   spawnArea: {fileID: 1919150687}
   spawnAreaSize: {x: 5, y: 5}
   totalEnemies: 100
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &2129713170
 GameObject:
   m_ObjectHideFlags: 0
