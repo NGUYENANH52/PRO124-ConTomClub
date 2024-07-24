@@ -11,11 +11,15 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private int armor; // Giáp của quái vật
 
     private Rigidbody2D _rb;
+    private Animator _animator;
     private bool isAttacking = false;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D của quái vật
+        _animator = GetComponent<Animator>();// Lấy thahf phần Animator của quái vật 
+        _animator.SetBool("Enemy_1_Run", true);//Dặt animotion mặc định là chạy bộ
+
     }
 
     void FixedUpdate()
@@ -45,6 +49,8 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log("Quái vật chạm vào thành trì");
             isAttacking = true;
+            _animator.SetBool("Enemy_1_Run", false);// Ngưng animotion chay bộ
+            _animator.SetTrigger("Attack");//Bắt đầu animation tấn công                                       
             StartCoroutine(AttackCastle(collision.GetComponent<CastleHealth>()));
         }
     }
