@@ -30,30 +30,32 @@ public class EnemyMovement : MonoBehaviour
     {
         // Tính toán vector hướng từ vị trí hiện tại đến thành trì
         Vector2 direction = (castle.position - transform.position).normalized;
-
+        Debug.Log("Hướng di chuyển: " + direction);
         // Tính toán vị trí mới
-        Vector2 newPosition = _rb.position + direction * speed * Time.deltaTime;
+        Vector2 newPosition = _rb.position + direction * speed * Time.fixedDeltaTime;
 
         // Di chuyển quái vật đến vị trí mới
         _rb.MovePosition(newPosition);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
-        // Kiểm tra nếu quái vật chạm vào thành trì
-        if (collision.transform == castle)
+        // Kiểm tra nếu quái vật chạm vào đối tượng có tag "Castle"
+        if (collision.CompareTag("Castle"))
         {
+            Debug.Log("Quái vật chạm vào thành trì");
             isAttacking = true;
-            StartCoroutine(AttackCastle());
+            StartCoroutine(AttackCastle(collision.GetComponent<CastleHealth>()));
         }
     }
 
-    IEnumerator AttackCastle()
+    IEnumerator AttackCastle(CastleHealth castleHealth)
     {
         while (isAttacking)
         {
+            Debug.Log("Quai vat tan cong thanh tri");
             // Gây sát thương lên thành trì
-            castle.GetComponent<CastleHealth>().TakeDamage(damage);
+            castleHealth.TakeDamage(damage);
 
             // Chờ đợi theo tốc độ đánh
             yield return new WaitForSeconds(1f / attackRate);
@@ -71,12 +73,13 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform == castle)
+        if (collision.CompareTag("Castle"))
         {
+            Debug.Log("Quái vật ngừng tấn công thành trì"); // Kiểm tra xem có ngừng tấn công hay không
             isAttacking = false;
-            StopCoroutine(AttackCastle());
+            StopCoroutine(AttackCastle(collision.GetComponent<CastleHealth>()));
         }
     }
 }
