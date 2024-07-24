@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+//using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -32,14 +33,29 @@ public class EnemyMovement : MonoBehaviour
 
     void MoveToCastle()
     {
-        // Tính toán vector hướng từ vị trí hiện tại đến thành trì
-        Vector2 direction = (castle.position - transform.position).normalized;
-        Debug.Log("Hướng di chuyển: " + direction);
-        // Tính toán vị trí mới
-        Vector2 newPosition = _rb.position + direction * speed * Time.fixedDeltaTime;
+        // Di chuyển thẳng xuống theo trục y
+        Vector2 newPosition = _rb.position + Vector2.down * speed * Time.fixedDeltaTime;
 
         // Di chuyển quái vật đến vị trí mới
         _rb.MovePosition(newPosition);
+
+        //// Tính toán vector hướng từ vị trí hiện tại đến thành trì
+        //Vector2 direction = (castle.position - transform.position).normalized;
+        //Debug.Log("Hướng di chuyển: " + direction);
+        //// Tính toán vị trí mới
+        //Vector2 newPosition = _rb.position + direction * speed * Time.fixedDeltaTime;
+        //if (castle  != null)
+        //{
+        //    Vector2 direction = (castle.position - transform.position).normalized;
+
+        //    Vector3 faceEnemy = direction * speed * Time.deltaTime;
+
+        //    transform.Translate(faceEnemy);
+
+        //}
+
+        // Di chuyển quái vật đến vị trí mới
+        //_rb.MovePosition(newPosition);
     }
 
     void OnTriggerEnter2D(UnityEngine.Collider2D collision)
