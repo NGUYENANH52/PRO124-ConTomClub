@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/TrangChu.unity
+    guid: 627132d5cc3a6524fa8cd8e2699301b9
+  - enabled: 1
+    path: Assets/Scenes/ChoiNgay.unity
+    guid: 7980866e43d40cc40a0948dc6788a3b8
+  - enabled: 1
+    path: Assets/Scenes/DangNhap.unity
+    guid: 45debd4e3bbe5944da9d170d7d2d0593
+  - enabled: 1
+    path: Assets/Scenes/DangKy.unity
+    guid: 4a9bb39e6d142614abcd4868a3b312e5
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: 736a95800273d7940aec12bf45ff4fa7
   m_configObjects: {}
