@@ -31,11 +31,11 @@ public class bulletScript : MonoBehaviour
             Debug.Log("Va chạm với quái!");
 
             // Gây sát thương cho quái
-            EnemyMovement enemy = other.GetComponent<EnemyMovement>();
+            /*EnemyMovement enemy = other.GetComponent<EnemyMovement>();
             if (enemy != null)
             {
                 enemy.TakeDamage(_damage);
-            }
+            }*/
 
             Destroy(this.gameObject);
             GameObject effectExplore = Instantiate(_effectBullet, transform.position, Quaternion.identity);
