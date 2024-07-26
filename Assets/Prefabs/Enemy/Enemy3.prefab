@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 7b5efcc1d0bae574899b5097ddb2be05, type: 2}
+  diemLuu: {fileID: 11400000, guid: 0c4d3aea72abc1842ae2316dbb0e970a, type: 2}
+  score: {fileID: 2892604048798669478, guid: 66ac1f300e291f848a7daf357b2dcebf, type: 3}
 --- !u!61 &-797474734485843209
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private int currentHealth;
+    public ScoreData diemLuu;
+    public TMP_Text score;
 
     void Start()
     {
@@ -15,6 +19,7 @@ public class EnemyMovement : MonoBehaviour
         _animator = GetComponent<Animator>(); // Lấy thành phần Animator của quái vật
         _animator.SetBool("isRun", true); // Đặt animation mặc định là đi bộ
         currentHealth = enemyData.health; // Khởi tạo máu hiện tại của quái vật
+        UpdateScoreUI();
     }
 
     void FixedUpdate()
@@ -60,10 +65,20 @@ public class EnemyMovement : MonoBehaviour
     {
         int actualDamage = Mathf.Max(incomingDamage - enemyData.armor, 0);
         currentHealth -= actualDamage;
+        Debug.Log("Quái vật nhận " + actualDamage + " sát thương. Máu hiện tại: " + currentHealth);
         if (currentHealth <= 0)
         {
             // Hủy quái vật khi máu giảm xuống 0
             Destroy(gameObject);
+            diemLuu.score++;           
+            UpdateScoreUI();
+        }
+    }
+    void UpdateScoreUI()
+    {
+        if (score != null)
+        {
+            score.text = "Điểm: " + diemLuu.score;
         }
     }
 }

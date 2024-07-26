@@ -36,6 +36,10 @@ public class bulletScript : MonoBehaviour
             {
                 enemy.TakeDamage(_damage);
             }
+            else
+            {
+                Debug.LogWarning("Không tìm thấy thành phần EnemyMovement trên đối tượng: " + other.gameObject.name);
+            }
 
             Destroy(this.gameObject);
             GameObject effectExplore = Instantiate(_effectBullet, transform.position, Quaternion.identity);
