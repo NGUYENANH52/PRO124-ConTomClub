@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5816715102751920341}
   - component: {fileID: 8604817231019492130}
   - component: {fileID: 4254270034906674886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.6, y: -3.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -0.5, y: -0.5, z: -0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde28955ecde214da53a815533cb00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5274
-  _lifeTime: 0.83
+  _speed: 150
+  _lifeTime: 3
   _effectBullet: {fileID: 8034231479130706159, guid: 7b6816f7305c9e1499b83b06245ffe0f, type: 3}
-  _damage: 172
+  _damage: 80

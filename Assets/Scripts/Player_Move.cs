@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,11 +13,14 @@ public class Player_move : MonoBehaviour
     [SerializeField] private GameObject _bullet;
     [SerializeField] Transform _firePoint;
     [SerializeField] private float _atkSpeed, _cooldown = 0;
-
+    //Animator
+    private Animator _anim;
+    private String currentAnim;
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,27 @@ public class Player_move : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         Vector2 movement = new Vector2(horizontal, 0).normalized;
         _rb.velocity = movement * _speedMove * Time.deltaTime;
+
+        if (Math.Abs(horizontal) > 0.1f)
+        {
+            changeAnim("run");
+            transform.rotation = Quaternion.Euler(new Vector3(0, (horizontal > 0.1f) ? 0 : -180, 0));
+            _rb.velocity = movement * _speedMove * Time.deltaTime;
+        }
+        else
+        {
+            changeAnim("idle");
+            _rb.velocity = Vector2.zero;
+        }
+    }
+    private void changeAnim(String animName)
+    {
+        if (currentAnim != animName)
+        {
+            _anim.ResetTrigger(animName);
+            currentAnim = animName;
+            _anim.SetTrigger(currentAnim);
+        }
     }
     void Attack()
     {

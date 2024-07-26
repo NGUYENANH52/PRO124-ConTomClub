@@ -13,22 +13,18 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody2D _rb;
     private Animator _animator;
-    private bool isAttacking = false;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D của quái vật
-        _animator = GetComponent<Animator>();// Lấy thahf phần Animator của quái vật 
+        _animator = GetComponent<Animator>();// Lấy thành phần Animator của quái vật 
         _animator.SetBool("Enemy_1_Run", true);//Dặt animotion mặc định là chạy bộ
 
     }
 
     void FixedUpdate()
     {
-        if (!isAttacking)
-        {
             MoveToCastle();
-        }
     }
 
     void MoveToCastle()
@@ -38,50 +34,6 @@ public class EnemyMovement : MonoBehaviour
 
         // Di chuyển quái vật đến vị trí mới
         _rb.MovePosition(newPosition);
-
-        //// Tính toán vector hướng từ vị trí hiện tại đến thành trì
-        //Vector2 direction = (castle.position - transform.position).normalized;
-        //Debug.Log("Hướng di chuyển: " + direction);
-        //// Tính toán vị trí mới
-        //Vector2 newPosition = _rb.position + direction * speed * Time.fixedDeltaTime;
-        //if (castle  != null)
-        //{
-        //    Vector2 direction = (castle.position - transform.position).normalized;
-
-        //    Vector3 faceEnemy = direction * speed * Time.deltaTime;
-
-        //    transform.Translate(faceEnemy);
-
-        //}
-
-        // Di chuyển quái vật đến vị trí mới
-        //_rb.MovePosition(newPosition);
-    }
-
-    void OnTriggerEnter2D(UnityEngine.Collider2D collision)
-    {
-        // Kiểm tra nếu quái vật chạm vào đối tượng có tag "Castle"
-        if (collision.CompareTag("Castle"))
-        {
-            Debug.Log("Quái vật chạm vào thành trì");
-            isAttacking = true;
-            _animator.SetBool("Enemy_1_Run", false);// Ngưng animotion chay bộ
-            _animator.SetTrigger("Attack");//Bắt đầu animation tấn công                                       
-            StartCoroutine(AttackCastle(collision.GetComponent<CastleHealth>()));
-        }
-    }
-
-    IEnumerator AttackCastle(CastleHealth castleHealth)
-    {
-        while (isAttacking)
-        {
-            Debug.Log("Quai vat tan cong thanh tri");
-            // Gây sát thương lên thành trì
-            castleHealth.TakeDamage(damage);
-
-            // Chờ đợi theo tốc độ đánh
-            yield return new WaitForSeconds(1f / attackRate);
-        }
     }
 
     public void TakeDamage(int incomingDamage)
@@ -92,16 +44,6 @@ public class EnemyMovement : MonoBehaviour
         {
             // Hủy quái vật khi máu giảm xuống 0
             Destroy(gameObject);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Castle"))
-        {
-            Debug.Log("Quái vật ngừng tấn công thành trì"); // Kiểm tra xem có ngừng tấn công hay không
-            isAttacking = false;
-            StopCoroutine(AttackCastle(collision.GetComponent<CastleHealth>()));
         }
     }
 }
