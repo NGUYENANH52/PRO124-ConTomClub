@@ -506,6 +506,7 @@ MonoBehaviour:
   attackRate: 0
   health: 0
   armor: 0
+  diemluu: {fileID: 11400000, guid: 5b1fea72cf860464285b3b48b6a23ba1, type: 2}
 --- !u!114 &1919150689
 MonoBehaviour:
   m_ObjectHideFlags: 0

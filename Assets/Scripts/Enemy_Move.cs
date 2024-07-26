@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private bool isAttacking = false;
+    public Scoredata diemluu;
 
     void Start()
     {
@@ -90,8 +91,10 @@ public class EnemyMovement : MonoBehaviour
         health -= actualDamage;
         if (health <= 0)
         {
+            
             // Hủy quái vật khi máu giảm xuống 0
             Destroy(gameObject);
+            diemluu.score++;
         }
     }
 

@@ -127,6 +127,7 @@ MonoBehaviour:
   attackRate: 0.5
   health: 60
   armor: 25
+  diemluu: {fileID: 11400000, guid: 5b1fea72cf860464285b3b48b6a23ba1, type: 2}
 --- !u!61 &2068921857491759571
 BoxCollider2D:
   m_ObjectHideFlags: 0
