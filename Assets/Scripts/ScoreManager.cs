@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         // Load high score khi bắt đầu trò chơi
-        scoreData.LoadHighScore();
+        //scoreData.LoadHighScore();
     }
 
     public void AddScore(int points)
@@ -25,12 +26,17 @@ public class ScoreManager : MonoBehaviour
         if (scoreData.score > scoreData.highScore)
         {
             scoreData.highScore = scoreData.score;
-            scoreData.SaveHighScore();
+            //scoreData.SaveHighScore();
         }
     }
 
     public void ResetScore()
     {
         scoreData.score = 0;
+    }
+
+    internal int GetHighScore()
+    {
+        throw new NotImplementedException();
     }
 }

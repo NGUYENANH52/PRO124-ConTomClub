@@ -18,11 +18,10 @@ public class EnemyMovement : MonoBehaviour
 
     //Save
     public ScoreData diemLuu;
-    private float count = 0;
+    
     public TMP_Text Score;
 
-    public int points = 10; // Số điểm cộng thêm khi kẻ địch bị tiêu diệt
-    private ScoreManager scoreManager;
+    
 
     void Start()
     {
@@ -30,8 +29,7 @@ public class EnemyMovement : MonoBehaviour
         _animator = GetComponent<Animator>();// Lấy thahf phần Animator của quái vật 
         _animator.SetBool("Enemy_1_Run", true);//Dặt animotion mặc định là chạy bộ
 
-        Score.text = "Score: " + diemLuu.score;
-        scoreManager = FindObjectOfType<ScoreManager>();
+        
 
     }
 
@@ -110,14 +108,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        // Khi kẻ địch bị tiêu diệt, thêm điểm cho người chơi
-        if (scoreManager != null)
-        {
-            scoreManager.AddScore(points);
-        }
-    }
+    
 
     void OnTriggerExit2D(Collider2D collision)
     {

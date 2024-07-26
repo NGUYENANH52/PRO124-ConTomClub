@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class ScoreDisplay : MonoBehaviour
@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        // ??m b?o r?ng ScoreManager ?� ???c tham chi?u
+        // Đảm bảo rằng ScoreManager đã được tham chiếu
         if (scoreManager == null)
         {
             scoreManager = FindObjectOfType<ScoreManager>();
