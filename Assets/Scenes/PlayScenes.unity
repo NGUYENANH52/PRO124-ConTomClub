@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delaySecond: 0
-  nameScene: SampleScene
+  nameScene: level1
   popupPause: {fileID: 0}
   buttonContinues: {fileID: 0}
 --- !u!1 &42247215
