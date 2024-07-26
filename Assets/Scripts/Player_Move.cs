@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,11 +13,14 @@ public class Player_move : MonoBehaviour
     [SerializeField] private GameObject _bullet;
     [SerializeField] Transform _firePoint;
     [SerializeField] private float _atkSpeed, _cooldown = 0;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+
+        
     }
 
     // Update is called once per frame
@@ -41,4 +45,5 @@ public class Player_move : MonoBehaviour
         Instantiate(_bullet, _firePoint.position, transform.rotation);
         _cooldown = _atkSpeed;
     }
+    
 }
