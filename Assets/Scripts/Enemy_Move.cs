@@ -22,6 +22,8 @@ public class EnemyMovement : MonoBehaviour
         _animator = GetComponent<Animator>();// Lấy thahf phần Animator của quái vật 
         _animator.SetBool("Enemy_1_Run", true);//Dặt animotion mặc định là chạy bộ
 
+        
+
     }
 
     void FixedUpdate()
@@ -94,7 +96,7 @@ public class EnemyMovement : MonoBehaviour
             
             // Hủy quái vật khi máu giảm xuống 0
             Destroy(gameObject);
-            diemluu.score++;
+            diemluu.score++;    
         }
     }
 
