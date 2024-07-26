@@ -10,8 +10,6 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private int currentHealth;
-    public ScoreData diemLuu;
-    public TMP_Text score;
 
     void Start()
     {
@@ -19,7 +17,6 @@ public class EnemyMovement : MonoBehaviour
         _animator = GetComponent<Animator>(); // Lấy thành phần Animator của quái vật
         _animator.SetBool("isRun", true); // Đặt animation mặc định là đi bộ
         currentHealth = enemyData.health; // Khởi tạo máu hiện tại của quái vật
-        UpdateScoreUI();
     }
 
     void FixedUpdate()
@@ -69,16 +66,11 @@ public class EnemyMovement : MonoBehaviour
         if (currentHealth <= 0)
         {
             // Hủy quái vật khi máu giảm xuống 0
-            Destroy(gameObject);
-            diemLuu.score++;           
-            UpdateScoreUI();
+            Destroy(gameObject);           
         }
     }
-    void UpdateScoreUI()
+ public bool IsDead()
     {
-        if (score != null)
-        {
-            score.text = "Điểm: " + diemLuu.score;
-        }
+        return currentHealth <= 0;
     }
 }

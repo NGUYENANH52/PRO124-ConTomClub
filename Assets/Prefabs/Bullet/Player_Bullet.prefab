@@ -165,3 +165,5 @@ MonoBehaviour:
   _lifeTime: 1
   _effectBullet: {fileID: 8034231479130706159, guid: 7b6816f7305c9e1499b83b06245ffe0f, type: 3}
   _damage: 40
+  diemLuu: {fileID: 11400000, guid: 0c4d3aea72abc1842ae2316dbb0e970a, type: 2}
+  scoreText: {fileID: 2892604048798669478, guid: 66ac1f300e291f848a7daf357b2dcebf, type: 3}
