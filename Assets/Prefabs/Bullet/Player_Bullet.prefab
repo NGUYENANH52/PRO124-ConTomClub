@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 0.4375, y: 0.4375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &5816715102751920341
@@ -165,5 +165,5 @@ MonoBehaviour:
   _lifeTime: 1
   _effectBullet: {fileID: 8034231479130706159, guid: 7b6816f7305c9e1499b83b06245ffe0f, type: 3}
   _damage: 40
-  diemLuu: {fileID: 11400000, guid: 0c4d3aea72abc1842ae2316dbb0e970a, type: 2}
+  scoreManager: {fileID: 1848074380755141258, guid: 2648fe6ecdfb8b14e99d3cd2c4016348, type: 3}
   scoreText: {fileID: 2892604048798669478, guid: 66ac1f300e291f848a7daf357b2dcebf, type: 3}

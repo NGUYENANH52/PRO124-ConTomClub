@@ -19,12 +19,23 @@ public class ScoreDisplay : MonoBehaviour
                 return;
             }
         }
+        UpdateScoreUI();
     }
 
     private void Update()
     {
-        scoreText.text = "Score: " + scoreManager.scoreData.score;
-        highScoreText.text = "High Score: " + scoreManager.scoreData.highScore;
+        UpdateScoreUI();
+    }
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score:" + scoreManager.scoreData.score;
+        }
+        if (highScoreText != null)
+        { 
+            highScoreText.text = "High Score :" + scoreManager.scoreData.highScore;
+        }
     }
 }
 

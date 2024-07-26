@@ -39,4 +39,9 @@ public class ScoreManager : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    internal void SaveHighScore()
+    {
+        throw new NotImplementedException();
+    }
 }
