@@ -1,18 +1,37 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class CastleHealth : MonoBehaviour
 {
     [SerializeField] private int health; // Máu của thành trì
+    private int currentHealth;
+    [SerializeField] private Slider healthSlider;
 
+    private void Start()
+    {
+        currentHealth = health;
+        UpdateHealthUI();
+    }
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        Debug.Log("Thành trì nhận sát thương: " + damage + " Máu còn lại: " + health); // Kiểm tra sát thương và máu còn lại       
-            if (health <= 0)
+        currentHealth -= damage;
+        if (currentHealth < 0)
         {
-            // Xử lý khi thành trì bị phá hủy (có thể là kết thúc trò chơi hoặc bất kỳ hành động nào khác)
-            Destroy(gameObject);
-            Debug.Log("Castle Destroyed!");
+            currentHealth = 0;
         }
+
+        UpdateHealthUI();
+
+        if (currentHealth <= 0)
+        {
+            // Xử lý khi thành trì bị phá hủy
+            Destroy(gameObject);
+        }
+    }
+
+    private void UpdateHealthUI()
+    {
+        healthSlider.value = (float)currentHealth / health;        
     }
 }
