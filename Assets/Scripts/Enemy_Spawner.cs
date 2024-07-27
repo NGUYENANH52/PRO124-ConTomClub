@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while (spawnedEnemies < totalEnemies)
         {
-            for (int i = 0; i < 2 && spawnedEnemies < totalEnemies; i++)
+            for (int i = 0; i < 5 && spawnedEnemies < totalEnemies; i++)
             {
                 SpawnEnemy();
                 spawnedEnemies++;

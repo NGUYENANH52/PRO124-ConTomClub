@@ -9,7 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: b99f40e7ab405d145b6dce78896e353d, type: 3}
   m_Name: ScoreData
   m_EditorClassIdentifier: 
   score: 0
+=======
+  m_Script: {fileID: 11500000, guid: a53c592c9712721429ee518cf31a56a2, type: 3}
+  m_Name: ScoreData
+  m_EditorClassIdentifier: 
+  score: 7
+  highScore: 0
+>>>>>>> origin/Final
