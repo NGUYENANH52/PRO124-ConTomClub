@@ -23,11 +23,11 @@ public class CastleHealth : MonoBehaviour
 
         UpdateHealthUI();
 
-        if (currentHealth <= 0)
+        /*if (currentHealth <= 0)
         {
             // Xử lý khi thành trì bị phá hủy
             Destroy(gameObject);
-        }
+        }*/
     }
 
     private void UpdateHealthUI()
