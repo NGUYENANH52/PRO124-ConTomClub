@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class DangKyTaiKhoan : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class DangKyTaiKhoan : MonoBehaviour
             switch (get)
             {
                 case "exist": thongbao.text = "Tài khoản đã tồn tại"; break;
-                case "OK": thongbao.text = "Đăng ký thành công"; break;
+                case "OK": thongbao.text = "Đăng ký thành công"; SceneManager.LoadScene(0); break;
                 case "ERROR": thongbao.text = "Đăng ký không thành công"; break;
                 default: thongbao.text = "Không kết nối được tới server"; break;
             }
