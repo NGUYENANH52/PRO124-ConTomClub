@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class DangKyTaiKhoan : MonoBehaviour
 {
@@ -29,16 +30,23 @@ public class DangKyTaiKhoan : MonoBehaviour
         }
         else if (www.isDone)
         {
-            string get = www.downloadHandler.text; 
-            
-            switch (get)
+            string get = www.downloadHandler.text;
+            if (get == "exist")
             {
-                case "exist": thongbao.text = "Tài khoản đã tồn tại"; break;
-                case "OK": thongbao.text = "Đăng ký thành công"; break;
-                case "ERROR": thongbao.text = "Đăng ký không thành công"; break;
-                default: thongbao.text = "Không kết nối được tới server"; break;
+                thongbao.text = "Tài khoản đã tồn tại";
             }
-        }
+            else if (get == "ERROR")
+            {
+                thongbao.text = "Đăng ký không thành công";
+            }
+            else
+            {
+                thongbao.text = "Đăng nhập tài khoản thành công";
+                SceneManager.LoadScene(0);
+            }
+            
+            
+        }       
 
     }
 }
