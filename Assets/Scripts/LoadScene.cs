@@ -14,5 +14,12 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    
+    public void PlayScenes()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void Setting()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

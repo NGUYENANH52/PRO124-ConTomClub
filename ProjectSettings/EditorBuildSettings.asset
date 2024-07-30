@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TrangChu.unity
+    guid: 627132d5cc3a6524fa8cd8e2699301b9
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: 7980866e43d40cc40a0948dc6788a3b8
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes.unity
+    guid: 94d8be5850e4a674f811cca0add897c5
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: 9664190f4c68e534f9b76a3f9f9f54e4
   m_configObjects: {}
