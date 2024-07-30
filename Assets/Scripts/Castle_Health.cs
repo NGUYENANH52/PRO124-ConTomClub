@@ -7,6 +7,7 @@ public class CastleHealth : MonoBehaviour
     [SerializeField] private int health; // Máu của thành trì
     private int currentHealth;
     [SerializeField] private Slider healthSlider;
+    
 
     private void Start()
     {
@@ -23,15 +24,16 @@ public class CastleHealth : MonoBehaviour
 
         UpdateHealthUI();
 
-        /*if (currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             // Xử lý khi thành trì bị phá hủy
             Destroy(gameObject);
-        }*/
+        }
     }
 
     private void UpdateHealthUI()
     {
-        healthSlider.value = (float)currentHealth / health;        
+      
+        healthSlider.value = (float)currentHealth / 1 ;
     }
 }

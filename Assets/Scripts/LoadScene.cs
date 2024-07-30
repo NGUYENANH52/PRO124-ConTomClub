@@ -20,6 +20,6 @@ public class LoadScene : MonoBehaviour
     }
     public void Setting()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 }
