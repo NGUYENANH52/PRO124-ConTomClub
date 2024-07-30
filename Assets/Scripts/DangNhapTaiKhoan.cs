@@ -48,7 +48,7 @@ public class DangNhapTaiKhoan : MonoBehaviour
             {
                 thongbao.text = "Đăng nhập thành công";
                 PlayerPrefs.SetString("token", get);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("GameMenu");
             }
         }
 

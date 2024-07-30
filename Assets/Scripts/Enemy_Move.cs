@@ -15,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D của quái vật
         _animator = GetComponent<Animator>(); // Lấy thành phần Animator của quái vật
-        _animator.SetBool("isRun", true); // Đặt animation mặc định là đi bộ
         currentHealth = enemyData.health; // Khởi tạo máu hiện tại của quái vật
     }
 

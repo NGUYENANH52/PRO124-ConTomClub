@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8148569859031698054}
   - component: {fileID: 9125880508798188990}
   - component: {fileID: -953810617721660010}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Enemy5
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -122,8 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 9c57b734d32b3fa49ac9d6115534eb7d, type: 2}
-  diemLuu: {fileID: 11400000, guid: 0c4d3aea72abc1842ae2316dbb0e970a, type: 2}
-  score: {fileID: 2892604048798669478, guid: 66ac1f300e291f848a7daf357b2dcebf, type: 3}
 --- !u!61 &9125880508798188990
 BoxCollider2D:
   m_ObjectHideFlags: 0

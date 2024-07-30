@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784097269797275264}
   - component: {fileID: 1327290367492901397}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fireBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 655768348, guid: 25b0629ccdf20df459ad8ea6dc78a098, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
