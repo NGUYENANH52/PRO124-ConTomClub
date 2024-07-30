@@ -185,10 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae79f13071bec314bb9cdd6dc03d282b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMove: 300
-  _bullet: {fileID: 7751436687977360156, guid: 497a31643301e36499e1164aa6996ca9, type: 3}
+  _speedMove: 700
+  _bullet: {fileID: 348725381945217764, guid: 4a4aa496030d4d643b73872637048d4c, type: 3}
   _firePoint: {fileID: 1048288528146854782}
-  _atkSpeed: 0.5
+  _atkSpeed: 0.2
   _cooldown: 0
 --- !u!1 &1938066101877453966
 GameObject:
