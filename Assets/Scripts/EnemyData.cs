@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "DataEnemy" , menuName = "GameData/DataEnemy")]
@@ -7,13 +7,18 @@ public class EnemyData : ScriptableObject
 {
     public string enemyName;
     public float speed;
-    public int damage;
-    public float attackRate;
+    public float originalSpeed;// Tốc độ gốc của quái vật
+    public float currentSpeed;// Tốc độ hiện tại của quái vật
+    public int damage;    
     public int health;
     public int armor;
     public GameObject explosionEffect;
     public int scoreValue; // so diem khi tieu diet quai
     public int expValue; // so exp
-
+    private void OnEnable()
+    {
+        originalSpeed = speed; // Khởi tạo tốc độ ban đầu
+        currentSpeed = speed; // Khởi tạo tốc độ hiện tại
+    }
 }
 

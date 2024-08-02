@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c5c10efc24a0b4ab954623ada91dcd, type: 3}
   m_Name: BulletData
   m_EditorClassIdentifier: 
+  enemyName: dan cham
   speed: 2000
   lifetime: 2
-  damage: 39
+  damage: 8
   expolsionEffect: {fileID: 1951264351769725102, guid: acec0e05ebce5bd4db7f78eb09381409, type: 3}
-  slowDownDuration: 3
-  slowDownFactor: 0.5
+  slowDownDuration: 0
+  bulletType: 1

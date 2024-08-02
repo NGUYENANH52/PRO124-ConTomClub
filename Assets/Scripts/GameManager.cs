@@ -27,7 +27,14 @@ public class GameManager : MonoBehaviour
 
         // Các hành động khác để bắt đầu màn chơi mới...
     }
-
+    public void StartNewMap()
+    {
+        EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();
+        foreach (EnemyMovement enemy in enemies)
+        {
+            enemy.RestoreOriginalSpeed();
+        }
+    }
     //public void EndGame()
     //{
     //    // Save high score khi kết thúc trò chơi
