@@ -10,12 +10,17 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private int currentHealth;
-
+    private float originalSpeed;
+    private ScoreManager scoreManager;
+    private PlayerExperience playerExperience;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D của quái vật
         _animator = GetComponent<Animator>(); // Lấy thành phần Animator của quái vật
         currentHealth = enemyData.health; // Khởi tạo máu hiện tại của quái vật
+        originalSpeed = enemyData.speed;
+        scoreManager = FindObjectOfType<ScoreManager>();
+        playerExperience = FindObjectOfType<PlayerExperience>();
     }
 
     void FixedUpdate()
@@ -64,9 +69,24 @@ public class EnemyMovement : MonoBehaviour
         Debug.Log("Quái vật nhận " + actualDamage + " sát thương. Máu hiện tại: " + currentHealth);
         if (currentHealth <= 0)
         {
-            // Hủy quái vật khi máu giảm xuống 0
-            Destroy(gameObject);           
+            if (scoreManager != null)
+            {
+                scoreManager.AddScore(enemyData.scoreValue);
+            }
+            if (playerExperience != null)
+            {
+                playerExperience.AddExperience(enemyData.expValue);
+            }
+
+            Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
+    }
+    public IEnumerator SlowDown(float duration , float slowDownfactor)
+    {
+        enemyData.speed *= slowDownfactor;       
+        yield return new WaitForSeconds(duration); // cho doi torng khonag thoi gian
+        enemyData.speed = originalSpeed; // khoi phuc toc do ban dau
     }
  public bool IsDead()
     {

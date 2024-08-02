@@ -28,14 +28,14 @@ public class GameManager : MonoBehaviour
         // Các hành động khác để bắt đầu màn chơi mới...
     }
 
-    public void EndGame()
-    {
-        // Save high score khi kết thúc trò chơi
-        if (scoreManager != null)
-        {
-            scoreManager.SaveHighScore();
-        }
+    //public void EndGame()
+    //{
+    //    // Save high score khi kết thúc trò chơi
+    //    if (scoreManager != null)
+    //    {
+    //        scoreManager.SaveHighScore();
+    //    }
 
-        // Các hành động khác để kết thúc trò chơi...
-    }
+    //    // Các hành động khác để kết thúc trò chơi...
+    //}
 }

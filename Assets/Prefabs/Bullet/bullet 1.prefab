@@ -161,9 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde28955ecde214da53a815533cb00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2500
-  lifeTime: 2
-  effectBullet: {fileID: 1951264351769725102, guid: acec0e05ebce5bd4db7f78eb09381409, type: 3}
-  _damage: 35
+  bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   scoreManager: {fileID: 6401688547269053597, guid: a09375839a81387479c56a8ba2955ead, type: 3}
-  scoreText: {fileID: 2650716561429402573, guid: e1c498c4b7a087a4ab8534ecc18093a0, type: 3}

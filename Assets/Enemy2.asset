@@ -19,3 +19,5 @@ MonoBehaviour:
   health: 60
   armor: 0
   explosionEffect: {fileID: 5523580533569395704, guid: 616d8c4121af8b949b476265e0e630a2, type: 3}
+  scoreValue: 56
+  expValue: 85

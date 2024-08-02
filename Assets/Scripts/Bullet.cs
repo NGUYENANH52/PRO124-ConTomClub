@@ -6,28 +6,42 @@ using TMPro;
 
 public class bulletScript : MonoBehaviour
 {
-    public float speed;
-    public float lifeTime;
-    public GameObject effectBullet;
-    public int _damage; // Biến lưu trữ sát thương của viên đạn
+    [SerializeField] private BulletData bulletData;
     public ScoreManager scoreManager; // Thêm biến ScoreData
-    public TMP_Text scoreText; // Thêm biến TMP_Text để hiển thị điểm số
-    Rigidbody2D rb;
+    
+    Rigidbody2D _rb;
+    //private EnemyData enemyData;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(this.gameObject, lifeTime);
-        if (scoreManager != null)
+        _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D
+
+        if (_rb == null)
         {
-            scoreManager = FindObjectOfType<ScoreManager>();
+            Debug.LogError("Rigidbody2D is not found on the bullet.");
+        }
+
+        Destroy(gameObject, bulletData.lifetime); // Hủy viên đạn sau một khoảng thời gian
+
+        // Tìm đối tượng ScoreManager trong scene
+        scoreManager = FindObjectOfType<ScoreManager>();
+        if (scoreManager == null)
+        {
+            Debug.LogError("Không tìm thấy ScoreManager trong cảnh này.");
         }
     }
 
     void Update()
     {
-        rb.velocity = transform.up * speed * Time.deltaTime;
-        
+        if (_rb != null)
+        {
+            // Di chuyển viên đạn theo trục y
+            _rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
+        }
+        else
+        {
+            Debug.LogError("Rigidbody2D có giá trị null trong phương thức Cập nhật.");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,28 +56,27 @@ public class bulletScript : MonoBehaviour
             EnemyMovement enemy = other.GetComponent<EnemyMovement>();
             if (enemy != null)
             {
-                enemy.TakeDamage(_damage);
+                enemy.TakeDamage(bulletData.damage);
+                StartCoroutine(enemy.SlowDown(bulletData.slowDownDuration, bulletData.slowDownFactor));
                 // Nếu quái vật bị tiêu diệt, cộng thêm điểm và cập nhật UI
-                if (enemy.IsDead() && scoreManager != null)
+                if (enemy.IsDead())
                 {
-                    scoreManager.AddScore(1);
-                    UpdateScoreUI();
+                    if(scoreManager != null)
+                    {
+                        scoreManager.AddScore(1);
+                    }
+                    
+                    
                 }
             }
          
 
-            Destroy(this.gameObject);
-            GameObject effectExplore = Instantiate(effectBullet, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            GameObject effectExplore = Instantiate(bulletData.expolsionEffect, transform.position, Quaternion.identity);
             Destroy(effectExplore, 0.1f);
 
           
         }
     }
-    private void UpdateScoreUI()
-    {
-        if (scoreText != null && scoreManager != null)
-        {
-            scoreText.text = "Điểm: " + scoreManager.scoreData.score ;
-        }
-    }
+
 }

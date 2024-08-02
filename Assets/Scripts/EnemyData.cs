@@ -12,7 +12,8 @@ public class EnemyData : ScriptableObject
     public int health;
     public int armor;
     public GameObject explosionEffect;
-
+    public int scoreValue; // so diem khi tieu diet quai
+    public int expValue; // so exp
 
 }
 
