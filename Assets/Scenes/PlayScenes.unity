@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -570,6 +571,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delaySecond: 0
   nameScene: level1
+  nameScene2: level2
+  nameScene3: level3
+  nameScene4: level4
+  nameScene5: level5
+  nameScene6: level2
   popupPause: {fileID: 0}
   buttonContinues: {fileID: 0}
 --- !u!1 &42247215
@@ -1960,7 +1966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 232959726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38826901}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ModeSelect2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &232959726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11227,7 +11245,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1874418099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38826901}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ModeSelect3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1874418099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11795,7 +11825,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076324844}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38826901}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ModeSelect4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2076324844
 MonoBehaviour:
   m_ObjectHideFlags: 0
