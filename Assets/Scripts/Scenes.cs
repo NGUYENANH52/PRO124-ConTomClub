@@ -28,6 +28,7 @@ public class Scenes : MonoBehaviour
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene);
+        Time.timeScale = 1;
     }
     //2
     public void ModeSelect2()
@@ -38,6 +39,7 @@ public class Scenes : MonoBehaviour
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene2);
+        Time.timeScale = 1;
     }
     //3
     public void ModeSelect3()
@@ -48,7 +50,8 @@ IEnumerator loadAfterDelay3()
 {
     yield return new WaitForSeconds(delaySecond);
     SceneManager.LoadScene(nameScene3);
-}
+        Time.timeScale = 1;
+    }
 
     //4
     public void ModeSelect4()
@@ -59,6 +62,7 @@ IEnumerator loadAfterDelay3()
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene4);
+        Time.timeScale = 1;
     }
     //5
     public void ModeSelect5()
@@ -69,6 +73,7 @@ IEnumerator loadAfterDelay3()
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene5);
+        Time.timeScale = 1;
     }
     //6
     public void ModeSelect6()
@@ -79,6 +84,7 @@ IEnumerator loadAfterDelay3()
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene6);
+        Time.timeScale = 1;
     }
     public void ShowPopupPause()
     {

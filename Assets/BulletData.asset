@@ -18,4 +18,4 @@ MonoBehaviour:
   damage: 8
   expolsionEffect: {fileID: 1951264351769725102, guid: acec0e05ebce5bd4db7f78eb09381409, type: 3}
   slowDownDuration: 0
-  bulletType: 1
+  bulletType: 0
