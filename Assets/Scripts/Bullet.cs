@@ -6,28 +6,24 @@ using TMPro;
 
 public class bulletScript : MonoBehaviour
 {
-    public float speed;
-    public float lifeTime;
-    public GameObject effectBullet;
-    public int _damage; // Biến lưu trữ sát thương của viên đạn
-    public ScoreManager scoreManager; // Thêm biến ScoreData
-    public TMP_Text scoreText; // Thêm biến TMP_Text để hiển thị điểm số
-    Rigidbody2D rb;
+    [SerializeField] private BulletData bulletData; 
+    Rigidbody2D _rb;
+    //private EnemyData enemyData;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(this.gameObject, lifeTime);
-        if (scoreManager != null)
-        {
-            scoreManager = FindObjectOfType<ScoreManager>();
-        }
+        _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D
+        Destroy(gameObject, bulletData.lifetime); // Hủy viên đạn sau một khoảng thời gian      
     }
 
     void Update()
     {
-        rb.velocity = transform.up * speed * Time.deltaTime;
+       
         
+            // Di chuyển viên đạn theo trục y
+            _rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
+        
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,28 +38,24 @@ public class bulletScript : MonoBehaviour
             EnemyMovement enemy = other.GetComponent<EnemyMovement>();
             if (enemy != null)
             {
-                enemy.TakeDamage(_damage);
-                // Nếu quái vật bị tiêu diệt, cộng thêm điểm và cập nhật UI
-                if (enemy.IsDead() && scoreManager != null)
+                if (bulletData.bulletType == BulletType.Normal)
                 {
-                    scoreManager.AddScore(1);
-                    UpdateScoreUI();
+                    enemy.TakeDamage(bulletData.damage);
+                }
+                else if (bulletData.bulletType == BulletType.Slow)
+                {
+                    enemy.TakeDamage(bulletData.damage);
+                    enemy.SlowDown(bulletData.slowDownDuration);
                 }
             }
-         
 
-            Destroy(this.gameObject);
-            GameObject effectExplore = Instantiate(effectBullet, transform.position, Quaternion.identity);
+
+            Destroy(gameObject);
+            GameObject effectExplore = Instantiate(bulletData.expolsionEffect, transform.position, Quaternion.identity);
             Destroy(effectExplore, 0.1f);
 
           
         }
     }
-    private void UpdateScoreUI()
-    {
-        if (scoreText != null && scoreManager != null)
-        {
-            scoreText.text = "Điểm: " + scoreManager.scoreData.score ;
-        }
-    }
+
 }

@@ -10,25 +10,36 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private int currentHealth;
-
+    private bool isSlowedDown = false; // Đánh dấu nếu quái vật đang bị giảm tốc độ
+    private float slowDownEndTime; // Thời gian kết thúc giảm tốc độ
+    private ScoreManager scoreManager;
+    private PlayerExperience playerExperience;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D của quái vật
         _animator = GetComponent<Animator>(); // Lấy thành phần Animator của quái vật
         currentHealth = enemyData.health; // Khởi tạo máu hiện tại của quái vật
+        enemyData.currentSpeed = enemyData.originalSpeed; // Khởi tạo tốc độ hiện tại của quái vật bằng tốc độ gốc
+        scoreManager = FindObjectOfType<ScoreManager>();
+        playerExperience = FindObjectOfType<PlayerExperience>();
     }
 
     void FixedUpdate()
     {
  
-            MoveDown();
+        MoveDown();
+
+        if (isSlowedDown && Time.time > slowDownEndTime)
+        {
+            RestoreOriginalSpeed();
+        }
 
     }
 
     void MoveDown()
     {
         // Di chuyển thẳng xuống theo trục y
-        Vector2 newPosition = _rb.position + Vector2.down * enemyData.speed * Time.fixedDeltaTime;
+        Vector2 newPosition = _rb.position + Vector2.down * enemyData.currentSpeed * Time.fixedDeltaTime;
 
         // Di chuyển quái vật đến vị trí mới
         _rb.MovePosition(newPosition);
@@ -64,11 +75,38 @@ public class EnemyMovement : MonoBehaviour
         Debug.Log("Quái vật nhận " + actualDamage + " sát thương. Máu hiện tại: " + currentHealth);
         if (currentHealth <= 0)
         {
-            // Hủy quái vật khi máu giảm xuống 0
-            Destroy(gameObject);           
+            // Cộng điểm và EXP khi quái vật bị tiêu diệt (giả sử có ScoreManager và PlayerExperience)
+            //ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+            //PlayerExperience playerExperience = FindObjectOfType<PlayerExperience>();
+            // Cộng điểm và EXP khi quái vật bị tiêu diệt
+            if (scoreManager != null)
+            {
+                scoreManager.AddScore(enemyData.scoreValue);
+            }
+            if (playerExperience != null)
+            {
+                playerExperience.AddExperience(enemyData.expValue);
+            }
+
+            Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
- public bool IsDead()
+    public void SlowDown(float duration)
+    {
+        if (!isSlowedDown)
+        {
+            enemyData.currentSpeed /= 2; // Giảm tốc độ đi một nửa
+            isSlowedDown = true;
+            slowDownEndTime = Time.time + duration; // Thiết lập thời gian kết thúc giảm tốc độ
+        }
+    }
+    public void RestoreOriginalSpeed()
+    {
+        enemyData.currentSpeed = enemyData.originalSpeed;
+        isSlowedDown = false;
+    }
+    public bool IsDead()
     {
         return currentHealth <= 0;
     }

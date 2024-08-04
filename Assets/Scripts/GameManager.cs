@@ -27,15 +27,22 @@ public class GameManager : MonoBehaviour
 
         // Các hành động khác để bắt đầu màn chơi mới...
     }
-
-    public void EndGame()
+    public void StartNewMap()
     {
-        // Save high score khi kết thúc trò chơi
-        if (scoreManager != null)
+        EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();
+        foreach (EnemyMovement enemy in enemies)
         {
-            scoreManager.SaveHighScore();
+            enemy.RestoreOriginalSpeed();
         }
-
-        // Các hành động khác để kết thúc trò chơi...
     }
+    //public void EndGame()
+    //{
+    //    // Save high score khi kết thúc trò chơi
+    //    if (scoreManager != null)
+    //    {
+    //        scoreManager.SaveHighScore();
+    //    }
+
+    //    // Các hành động khác để kết thúc trò chơi...
+    //}
 }

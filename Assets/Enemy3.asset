@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Enemy3
   m_EditorClassIdentifier: 
   enemyName: "Qu\xE1i Gi\xE1p"
-  speed: 0.25
+  speed: 1
+  originalSpeed: 1
+  currentSpeed: 1
   damage: 10
-  attackRate: 0.5
   health: 60
   armor: 25
   explosionEffect: {fileID: 8905114937351371896, guid: 3963de3408b3b824eae5fab18a27b07c, type: 3}
+  scoreValue: 131
+  expValue: 103
