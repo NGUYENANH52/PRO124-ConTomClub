@@ -6,24 +6,18 @@ using TMPro;
 
 public class bulletScript : MonoBehaviour
 {
-    [SerializeField] private BulletData bulletData; 
+    [SerializeField] private BulletData bulletData;
     Rigidbody2D _rb;
-    //private EnemyData enemyData;
 
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>(); // Lấy thành phần Rigidbody2D
-        Destroy(gameObject, bulletData.lifetime); // Hủy viên đạn sau một khoảng thời gian      
+        _rb = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, bulletData.lifetime);
     }
 
     void Update()
     {
-       
-        
-            // Di chuyển viên đạn theo trục y
-            _rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
-        
-       
+        _rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,28 +28,28 @@ public class bulletScript : MonoBehaviour
         {
             Debug.Log("Va chạm với quái!");
 
-            // Gây sát thương cho quái
             EnemyMovement enemy = other.GetComponent<EnemyMovement>();
             if (enemy != null)
             {
-                if (bulletData.bulletType == BulletType.Normal)
+                switch (bulletData.bulletType)
                 {
-                    enemy.TakeDamage(bulletData.damage);
-                }
-                else if (bulletData.bulletType == BulletType.Slow)
-                {
-                    enemy.TakeDamage(bulletData.damage);
-                    enemy.SlowDown(bulletData.slowDownDuration);
+                    case BulletType.Normal:
+                        enemy.TakeDamage(bulletData.damage);
+                        break;
+                    case BulletType.Ice_Bullet:
+                        enemy.TakeDamage(bulletData.damage);
+                        enemy.StartSlow(bulletData.slowDownDuration);
+                        break;
+                    case BulletType.Fire_Bullet: // Loại đạn lửa
+                        enemy.TakeDamage(bulletData.damage);
+                        enemy.StartBurning(bulletData.burnDamagePercentage, bulletData.burnDuration);
+                        break;
                 }
             }
-
 
             Destroy(gameObject);
             GameObject effectExplore = Instantiate(bulletData.expolsionEffect, transform.position, Quaternion.identity);
             Destroy(effectExplore, 0.1f);
-
-          
         }
     }
-
 }
