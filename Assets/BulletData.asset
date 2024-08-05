@@ -20,5 +20,5 @@ MonoBehaviour:
   slowDownDuration: 0
   burnDamagePercentage: 0.2
   burnDuration: 2
-  burnDelay: 0
+  burnDelay: 0.5
   bulletType: 2

@@ -21,7 +21,10 @@ public class EnemyMovement : MonoBehaviour
     private float burnEndTime;
     private float burnDamage;
     private Coroutine burnCoroutine;
-    private BulletData bulletData;
+    [SerializeField] private BulletData bulletData;
+    //Hiệu ứng
+    [SerializeField] private GameObject fireEffectSprite;
+    [SerializeField] private GameObject iceEffectSprite;
 
 
     void Start()
@@ -99,7 +102,8 @@ public class EnemyMovement : MonoBehaviour
         {
             currentSpeed /= 2; // Giảm tốc độ đi một nửa
             isSlowedDown = true;
-            slowDownEndTime = Time.time + duration;  
+            slowDownEndTime = Time.time + duration;
+            iceEffectSprite.SetActive(true);
         }
     }
 
@@ -107,12 +111,13 @@ public class EnemyMovement : MonoBehaviour
     {
         currentSpeed = enemyData.originalSpeed;
         isSlowedDown = false;
+        iceEffectSprite.SetActive(false);
     }
     public void StartBurning(float damagePercentage, float duration)
     {
         if (!isBurning)
         {
-            bulletData.burnDamagePercentage = damagePercentage;
+            burnDamage = Mathf.RoundToInt(enemyData.health * damagePercentage); // Sử dụng giá trị damagePercentage truyền vào
             burnEndTime = Time.time + duration;
             isBurning = true;
             if (burnCoroutine != null)
@@ -120,6 +125,7 @@ public class EnemyMovement : MonoBehaviour
                 StopCoroutine(burnCoroutine);
             }
             burnCoroutine = StartCoroutine(BurnDamageCoroutine());
+            fireEffectSprite.SetActive(true);
         }
     }
 
@@ -130,6 +136,7 @@ public class EnemyMovement : MonoBehaviour
         {
             StopCoroutine(burnCoroutine);
         }
+        fireEffectSprite.SetActive(false);
     }
 
     private IEnumerator BurnDamageCoroutine()

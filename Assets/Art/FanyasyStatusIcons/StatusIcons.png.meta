@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 600
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -70,11 +72,12 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -123,6 +129,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -135,13 +142,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Healing
+      name: StatusIcons_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,20 +157,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f962e47f71d5145b7a830999b156b5
-      internalID: -651057808
+      spriteID: f44ce970cf724ad44850297c32716c9f
+      internalID: -1636133976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stun
+      name: StatusIcons_1
       rect:
         serializedVersion: 2
         x: 256
@@ -170,20 +178,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dea8753b98a9544fae8b775eb74a6a7
-      internalID: -1611920951
+      spriteID: aa7dcb6c82f3dff47b01032ffe3f91f0
+      internalID: 1722353758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sleep
+      name: StatusIcons_2
       rect:
         serializedVersion: 2
         x: 512
@@ -191,20 +199,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e21b165dbf254847b756369d6d0dda7
-      internalID: 1812906440
+      spriteID: 9f8eeeef4dd4ab042a1a0d95d9d4439d
+      internalID: -660954994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Speed
+      name: StatusIcons_3
       rect:
         serializedVersion: 2
         x: 768
@@ -212,20 +220,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4a18c91b4135574aa797a30479fc26e
-      internalID: 485823971
+      spriteID: 34eeca2ae5365824ca6e6b8b559cddfc
+      internalID: 1311638112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Freezing
+      name: StatusIcons_4
       rect:
         serializedVersion: 2
         x: 0
@@ -233,20 +241,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b2f30f7fa6ab2d4e9a827f289613f7c
-      internalID: 1401011104
+      spriteID: 78f8da3b728841e4283105882fff6871
+      internalID: 358550916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bleeding
+      name: StatusIcons_5
       rect:
         serializedVersion: 2
         x: 256
@@ -254,20 +262,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7af1657105023a34993007562662e976
-      internalID: 374495580
+      spriteID: bbd61ea0335e9f740b5eee4218818274
+      internalID: 926508925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Poison
+      name: StatusIcons_6
       rect:
         serializedVersion: 2
         x: 512
@@ -275,20 +283,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d32fc785b2d6a414eba3ab0f67b981d5
-      internalID: 2047992146
+      spriteID: 9b03618434fbe5d4083803d49c8b8f59
+      internalID: -918097185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire
+      name: StatusIcons_7
       rect:
         serializedVersion: 2
         x: 768
@@ -296,20 +304,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4089619450f73049afe32f25bd43c5a
-      internalID: 695775810
+      spriteID: 12762d590d77ee941866180065c6ad55
+      internalID: 1116213678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Curse
+      name: StatusIcons_8
       rect:
         serializedVersion: 2
         x: 0
@@ -317,20 +325,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4702287934378f245a0800c887cf8cdb
-      internalID: -606357570
+      spriteID: 7d480c362f5776f4db60636a3d5bb492
+      internalID: -934650293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bless
+      name: StatusIcons_9
       rect:
         serializedVersion: 2
         x: 256
@@ -338,20 +346,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb62f2e69369fc4d8aae139f025d033
-      internalID: -214298916
+      spriteID: ec1f51e6110c15b47a6e5fe53199dadb
+      internalID: 784338303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slowdown
+      name: StatusIcons_10
       rect:
         serializedVersion: 2
         x: 512
@@ -359,20 +367,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94fee00c5523d294bb97023ee5f11c32
-      internalID: 1019859777
+      spriteID: 918cbd2dbdccb9741a54deb9753dad77
+      internalID: 1994274348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thunder
+      name: StatusIcons_11
       rect:
         serializedVersion: 2
         x: 768
@@ -386,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 635506bdc9f5f594797862970e4f47c7
-      internalID: 2062015785
+      spriteID: 353680a310867de45960e93af00f7c30
+      internalID: -1426360288
       vertices: []
       indices: 
       edges: []
@@ -403,21 +411,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bleeding: 374495580
-      Bless: -214298916
-      Curse: -606357570
-      Fire: 695775810
-      Freezing: 1401011104
-      Healing: -651057808
-      Poison: 2047992146
-      Sleep: 1812906440
-      Slowdown: 1019859777
-      Speed: 485823971
-      Stun: -1611920951
-      Thunder: 2062015785
-  spritePackingTag: 
+      StatusIcons_0: -1636133976
+      StatusIcons_1: 1722353758
+      StatusIcons_10: 1994274348
+      StatusIcons_11: -1426360288
+      StatusIcons_2: -660954994
+      StatusIcons_3: 1311638112
+      StatusIcons_4: 358550916
+      StatusIcons_5: 926508925
+      StatusIcons_6: -918097185
+      StatusIcons_7: 1116213678
+      StatusIcons_8: -934650293
+      StatusIcons_9: 784338303
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

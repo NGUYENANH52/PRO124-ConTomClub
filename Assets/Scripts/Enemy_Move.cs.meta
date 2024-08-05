@@ -3,7 +3,11 @@ guid: 8917efdc0f9a77243afc971c90813a8a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyData: {instanceID: 0}
+  - bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
+  - fireEffectSprite: {instanceID: 0}
+  - iceEffectSprite: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
