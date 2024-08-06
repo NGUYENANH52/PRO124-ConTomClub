@@ -1,13 +1,16 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CastleHealth : MonoBehaviour
 {
     [SerializeField] private int health; // Máu của thành trì
     private int currentHealth;
     [SerializeField] private Slider healthSlider;
-    
+
+
+   
 
     private void Start()
     {
@@ -28,7 +31,9 @@ public class CastleHealth : MonoBehaviour
         {
             // Xử lý khi thành trì bị phá hủy
             Destroy(gameObject);
+            
         }
+    
     }
 
     private void UpdateHealthUI()
@@ -36,4 +41,10 @@ public class CastleHealth : MonoBehaviour
       
         healthSlider.value = (float)currentHealth / 1 ;
     }
+
+
+
+
+
+   
 }

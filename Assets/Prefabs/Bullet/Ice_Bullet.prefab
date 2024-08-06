@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &348725381945217764
+--- !u!1 &435215709044660800
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7793230313490858562}
-  - component: {fileID: 4312118986279803443}
-  - component: {fileID: 4824058051456391923}
-  - component: {fileID: 2481626815764719951}
-  - component: {fileID: 245428254530441583}
-  m_Layer: 7
-  m_Name: bullet 1
+  - component: {fileID: 6381865844795845813}
+  - component: {fileID: 869058964435229597}
+  - component: {fileID: 5746963800028342505}
+  - component: {fileID: 7884787468067242350}
+  - component: {fileID: 438133860057141479}
+  m_Layer: 0
+  m_Name: Ice_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7793230313490858562
+--- !u!4 &6381865844795845813
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348725381945217764}
+  m_GameObject: {fileID: 435215709044660800}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -84.454285, y: 488.9522, z: 0}
-  m_LocalScale: {x: 0.60759, y: 0.60759, z: 0.60759}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12917489, y: -2.3024461, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!212 &4312118986279803443
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &869058964435229597
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348725381945217764}
+  m_GameObject: {fileID: 435215709044660800}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,26 +75,26 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: -473952539, guid: 25b0629ccdf20df459ad8ea6dc78a098, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 667843063, guid: 22a40af72f8b83b43bc589c75891747b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.75, y: 0.40625}
+  m_Size: {x: 0.1875, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4824058051456391923
+--- !u!50 &5746963800028342505
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348725381945217764}
+  m_GameObject: {fileID: 435215709044660800}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -114,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &2481626815764719951
+--- !u!58 &7884787468067242350
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348725381945217764}
+  m_GameObject: {fileID: 435215709044660800}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -148,18 +148,17 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.12499999
---- !u!114 &245428254530441583
+  m_Radius: 0.1
+--- !u!114 &438133860057141479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348725381945217764}
+  m_GameObject: {fileID: 435215709044660800}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fde28955ecde214da53a815533cb00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
-  scoreManager: {fileID: 6401688547269053597, guid: a09375839a81387479c56a8ba2955ead, type: 3}
+  bulletData: {fileID: 11400000, guid: 6dafd2da2f5129648ae225a7ef7a2a7c, type: 2}
