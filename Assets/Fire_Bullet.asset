@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c5c10efc24a0b4ab954623ada91dcd, type: 3}
   m_Name: Fire_Bullet
   m_EditorClassIdentifier: 
-  enemyName: Ice Bullet
+  enemyName: Fire Bullet
   speed: 500
   lifetime: 2
   damage: 40
   expolsionEffect: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}
-  slowDownDuration: 2
-  burnDamagePercentage: 0
-  burnDuration: 0
-  burnDelay: 0
-  bulletType: 1
+  slowDownDuration: 0
+  burnDamagePercentage: 0.4
+  burnDuration: 2
+  burnDelay: 0.2
+  bulletType: 2
