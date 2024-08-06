@@ -575,7 +575,7 @@ MonoBehaviour:
   nameScene3: level3
   nameScene4: level4
   nameScene5: level5
-  nameScene6: level2
+  nameScene6: level6
   popupPause: {fileID: 0}
   buttonContinues: {fileID: 0}
 --- !u!1 &42247215
