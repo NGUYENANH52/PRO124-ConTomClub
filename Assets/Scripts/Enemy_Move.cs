@@ -25,6 +25,8 @@ public class EnemyMovement : MonoBehaviour
     //Hiệu ứng
     [SerializeField] private GameObject fireEffectSprite;
     [SerializeField] private GameObject iceEffectSprite;
+    // Wave end
+    private EnemySpawner enemySpawner;
 
 
     void Start()
@@ -35,6 +37,7 @@ public class EnemyMovement : MonoBehaviour
         currentSpeed = enemyData.originalSpeed; // Khởi tạo với tốc độ gốc của quái vật
         scoreManager = FindObjectOfType<ScoreManager>();
         playerExperience = FindObjectOfType<PlayerExperience>();
+        enemySpawner = FindObjectOfType<EnemySpawner>();// Tìm đối tượng EnemySpawner trong scene
     }
 
     void FixedUpdate()
@@ -68,6 +71,11 @@ public class EnemyMovement : MonoBehaviour
         castleHealth.TakeDamage(enemyData.damage);
         Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+        // Gọi phương thức OnEnemyDestroyed của EnemySpawner khi quái vật bị tiêu diệt
+        if (enemySpawner != null)
+        {
+            enemySpawner.OnEnemyDestroyed();
+        }
     }
 
     public void TakeDamage(int incomingDamage)
@@ -90,6 +98,12 @@ public class EnemyMovement : MonoBehaviour
             {
                 playerExperience.AddExperience(enemyData.expValue);
             }
+            // Gọi phương thức OnEnemyDestroyed của EnemySpawner khi quái vật bị tiêu diệt
+            if (enemySpawner != null)
+            {
+                enemySpawner.OnEnemyDestroyed();
+            }
+            Destroy(gameObject);
 
             Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject); // Hủy quái vật khi máu <= 0
