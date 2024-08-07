@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -13,6 +13,7 @@ public class Player_move : MonoBehaviour
     [SerializeField] private GameObject _bullet;
     [SerializeField] Transform _firePoint;
     [SerializeField] private float _atkSpeed, _cooldown = 0;
+    public BulletManager bulletManager;
     //Animator
     private Animator _anim;
     private String currentAnim;
@@ -27,7 +28,11 @@ public class Player_move : MonoBehaviour
     void Update()
     {
         Move();
-        Attack();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }
+
     }
     void Move()
     {
@@ -56,14 +61,40 @@ public class Player_move : MonoBehaviour
             _anim.SetTrigger(currentAnim);
         }
     }
+
     void Attack()
     {
-        _cooldown -= Time.deltaTime;
-        if (_cooldown > 0)
+
+        //_cooldown -= Time.deltaTime;
+        //if (_cooldown > 0)
+        //{
+        //    return;
+        //}
+        //Instantiate(_bullet, _firePoint.position, transform.rotation);
+        //_cooldown = _atkSpeed;
+        
+
+
+        if (bulletManager == null)
         {
+            Debug.LogError("BulletManager is not assigned.");
             return;
         }
-        Instantiate(_bullet, _firePoint.position, transform.rotation);
-        _cooldown = _atkSpeed;
+
+        BulletData currentBulletData = bulletManager.GetCurrentBulletData();
+        if (currentBulletData == null)
+        {
+            Debug.LogError("Current BulletData is null.");
+            return;
+        }
+
+        GameObject bullet = Instantiate(currentBulletData.bulletPrefab, _firePoint.position, _firePoint.rotation);
+        if (bullet == null)
+        {
+            Debug.LogError("Bullet prefab is null.");
+            return;
+        }
+
+        bullet.GetComponent<bulletScript>().Initialize(currentBulletData);
     }
 }

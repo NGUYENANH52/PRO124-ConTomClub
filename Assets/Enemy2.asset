@@ -17,8 +17,9 @@ MonoBehaviour:
   originalSpeed: 1
   currentSpeed: 1
   damage: 7
-  health: 60
+  health: 100
   armor: 0
   explosionEffect: {fileID: 5523580533569395704, guid: 616d8c4121af8b949b476265e0e630a2, type: 3}
   scoreValue: 56
   expValue: 85
+  enemyPrefab: {fileID: 8106329244140629386, guid: efa256114cd819849a705100a747464f, type: 3}

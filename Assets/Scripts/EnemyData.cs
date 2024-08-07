@@ -15,6 +15,7 @@ public class EnemyData : ScriptableObject
     public GameObject explosionEffect;
     public int scoreValue; // so diem khi tieu diet quai
     public int expValue; // so exp
+    public GameObject enemyPrefab;
     private void OnEnable()
     {
         originalSpeed = speed; // Khởi tạo tốc độ ban đầu

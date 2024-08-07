@@ -11,7 +11,7 @@ public enum BulletType
 [CreateAssetMenu(fileName = "BulletData",menuName = "GameData/BulletData",order = 10)]
 public class BulletData : ScriptableObject 
 {
-    public string enemyName;
+    public string Name;
     public float speed;
     public float lifetime;
     public int damage;
@@ -24,4 +24,5 @@ public class BulletData : ScriptableObject
     public float burnDelay; // Thời gian giữa các lần gây sát thương đốt
     //Type_Bullet
     public BulletType bulletType; // Thêm loại đạn
+    public GameObject bulletPrefab;
 }
