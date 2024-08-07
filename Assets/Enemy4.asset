@@ -22,3 +22,4 @@ MonoBehaviour:
   explosionEffect: {fileID: 849914290649736047, guid: 6fa3feeea3da03642a5c41f38d8464b5, type: 3}
   scoreValue: 81
   expValue: 79
+  enemyPrefab: {fileID: 3883242198314171504, guid: 9c02fc1bf86d2f847aaabcb4c6f203c3, type: 3}

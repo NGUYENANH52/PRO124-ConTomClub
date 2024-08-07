@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c5c10efc24a0b4ab954623ada91dcd, type: 3}
   m_Name: Fire_Bullet
   m_EditorClassIdentifier: 
-  enemyName: Fire Bullet
-  speed: 500
-  lifetime: 2
-  damage: 40
-  expolsionEffect: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}
+  Name: Fire_Bullet
+  speed: 1500
+  lifetime: 2.5
+  damage: 30
+  expolsionEffect: {fileID: 3550417733891429122, guid: 28b3d40ec1e18054586a8972a6ca2f4f, type: 3}
   slowDownDuration: 0
   burnDamagePercentage: 0.4
-  burnDuration: 2
-  burnDelay: 0.2
+  burnDuration: 5
+  burnDelay: 1
   bulletType: 2
+  bulletPrefab: {fileID: 435215709044660800, guid: 4ad944055890cb74097ecd5e4f59da1d, type: 3}
