@@ -14,6 +14,8 @@ public class Scenes : MonoBehaviour
     public string nameScene4 = "level2";
     public string nameScene5 = "level2";
     public string nameScene6 = "level2";
+    public string nameScene7 = "level2";
+    public string nameScene8 = "level2";
 
 
     public GameObject popupPause;
@@ -85,6 +87,28 @@ IEnumerator loadAfterDelay3()
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene6);
+        Time.timeScale = 1;
+    }
+    //7
+    public void ModeSelect7()
+    {
+        StartCoroutine(loadAfterDelay7());
+    }
+    IEnumerator loadAfterDelay7()
+    {
+        yield return new WaitForSeconds(delaySecond);
+        SceneManager.LoadScene(nameScene7);
+        Time.timeScale = 1;
+    }
+    //8
+    public void ModeSelect8()
+    {
+        StartCoroutine(loadAfterDelay8());
+    }
+    IEnumerator loadAfterDelay8()
+    {
+        yield return new WaitForSeconds(delaySecond);
+        SceneManager.LoadScene(nameScene8);
         Time.timeScale = 1;
     }
     public void ShowPopupPause()

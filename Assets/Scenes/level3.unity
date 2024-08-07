@@ -2615,7 +2615,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1454690062}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: GameMenu
+        m_MethodName: Setting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5862,10 +5862,10 @@ MonoBehaviour:
   delaySecond: 0
   nameScene: Pause
   nameScene2: level2
-  nameScene3: level3
+  nameScene3: level2
   nameScene4: level4
-  nameScene5: level5
-  nameScene6: level6
+  nameScene5: level2
+  nameScene6: level2
   nameScene7: level2
   nameScene8: level2
   popupPause: {fileID: 268782837}
@@ -7050,7 +7050,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1454690058}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
-        m_MethodName: ModeSelect2
+        m_MethodName: ModeSelect4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
