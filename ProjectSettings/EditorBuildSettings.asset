@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/level5.unity
     guid: 73807aedaab94394dbbeb0d87889b54a
   - enabled: 1
-    path: Assets/Scenes/End_Lose.unity
+    path: Assets/Scenes/end_lose.unity
     guid: e7b9679c10aad244ea228d5e57e0ca6b
   - enabled: 1
     path: Assets/Scenes/End_Win.unity
