@@ -27,12 +27,9 @@ public class Player_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Attack();
-        }
-
+        Move();      
+        Attack();
+        
     }
     void Move()
     {
@@ -65,36 +62,36 @@ public class Player_move : MonoBehaviour
     void Attack()
     {
 
-        //_cooldown -= Time.deltaTime;
-        //if (_cooldown > 0)
+        _cooldown -= Time.deltaTime;
+        if (_cooldown > 0)
+        {
+            return;
+        }
+        Instantiate(_bullet, _firePoint.position, transform.rotation);
+        _cooldown = _atkSpeed;
+
+
+        // thay doi hieu ung dan
+        //if (bulletManager == null)
         //{
+        //    Debug.LogError("BulletManager is not assigned.");
         //    return;
         //}
-        //Instantiate(_bullet, _firePoint.position, transform.rotation);
-        //_cooldown = _atkSpeed;
-        
 
+        //BulletData currentBulletData = bulletManager.GetCurrentBulletData();
+        //if (currentBulletData == null)
+        //{
+        //    Debug.LogError("Current BulletData is null.");
+        //    return;
+        //}
 
-        if (bulletManager == null)
-        {
-            Debug.LogError("BulletManager is not assigned.");
-            return;
-        }
+        //GameObject bullet = Instantiate(currentBulletData.bulletPrefab, _firePoint.position, _firePoint.rotation);
+        //if (bullet == null)
+        //{
+        //    Debug.LogError("Bullet prefab is null.");
+        //    return;
+        //}
 
-        BulletData currentBulletData = bulletManager.GetCurrentBulletData();
-        if (currentBulletData == null)
-        {
-            Debug.LogError("Current BulletData is null.");
-            return;
-        }
-
-        GameObject bullet = Instantiate(currentBulletData.bulletPrefab, _firePoint.position, _firePoint.rotation);
-        if (bullet == null)
-        {
-            Debug.LogError("Bullet prefab is null.");
-            return;
-        }
-
-        bullet.GetComponent<bulletScript>().Initialize(currentBulletData);
+        //bullet.GetComponent<bulletScript>().Initialize(currentBulletData);
     }
 }
