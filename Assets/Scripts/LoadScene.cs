@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
-{
-    
+{       
     public void Trangchu()
     {
         SceneManager.LoadScene(0);
@@ -18,8 +17,5 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
-    public void Setting()
-    {
-        SceneManager.LoadScene(5);
-    }
+   
 }

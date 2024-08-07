@@ -18,6 +18,7 @@ public class Scenes : MonoBehaviour
 
     public GameObject popupPause;
     public Button buttonContinues;
+    
 
 
     public void ModeSelect()
@@ -104,4 +105,7 @@ IEnumerator loadAfterDelay3()
         SceneManager.LoadScene(currentSceneName);
         Time.timeScale = 1;
     }
+
+    
+
 }

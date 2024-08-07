@@ -20,9 +20,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/level2.unity
     guid: cc53ec559b9386843aa18fa8c8d693c3
-  - enabled: 1
-    path: Assets/Scenes/Setting.unity
-    guid: 9664190f4c68e534f9b76a3f9f9f54e4
   - enabled: 0
     path: Assets/Scenes/level3.unity
     guid: 91a2a789585f3864eb6e8c626a3e9500
@@ -32,10 +29,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/level5.unity
     guid: 73807aedaab94394dbbeb0d87889b54a
-  - enabled: 1
-    path: Assets/Scenes/end_lose.unity
+  - enabled: 0
+    path: Assets/Scenes/End_Lose.unity
     guid: e7b9679c10aad244ea228d5e57e0ca6b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/End_Win.unity
     guid: f4dc86e8860b114428b2414317cde35b
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: 9664190f4c68e534f9b76a3f9f9f54e4
   m_configObjects: {}

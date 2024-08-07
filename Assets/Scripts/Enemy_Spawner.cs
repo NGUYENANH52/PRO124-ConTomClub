@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform spawnArea;//Diem turng tam ca khu vuc sinh quai
     [SerializeField] private Vector2 spawnAreaSize; // Kích thước của khu vực sinh quái vật
     [SerializeField] private float timeBetweenWaves;// Thời gian chờ giữa các wave
-    [SerializeField] private string winSceneName;
+    [SerializeField] private GameObject Win;
     private int currentWaveIndex = 0;
     private int remainingEnemies = 0; // so luong quai vat con trong game
     private EnemyData enemyData;
@@ -85,7 +85,7 @@ public class EnemySpawner : MonoBehaviour
         }
         if (wavesCompleted && remainingEnemies <= 0) 
         {
-            LoadWinScene();
+            LoadWin();
         }
         
     }
@@ -97,14 +97,13 @@ public class EnemySpawner : MonoBehaviour
         if (wavesCompleted && remainingEnemies <= 0)
         {
             // Nếu không còn quái vật và tất cả các wave đã hoàn thành
-            LoadWinScene();
+            LoadWin();
         }
     }
-    private void LoadWinScene()
+    private void LoadWin()  
     {
-        Time.timeScale = 1;
-        Debug.Log("Chuyển sang màn hình chiến thắng...");
-        SceneManager.LoadScene(winSceneName);
+        Time.timeScale = 0;
+        Win.SetActive(true);
     }
     
 }

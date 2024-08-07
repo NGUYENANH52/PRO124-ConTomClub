@@ -8,8 +8,7 @@ public class CastleHealth : MonoBehaviour
     [SerializeField] private int health; // Máu của thành trì
     private int currentHealth;
     [SerializeField] private Slider healthSlider;
-    [SerializeField] private string Lost ;
-
+    [SerializeField] private GameObject Lose;
     private void Start()
     {
         currentHealth = health;
@@ -39,10 +38,10 @@ public class CastleHealth : MonoBehaviour
 
     private void GameOver()
     {
-        // Dừng trò chơi
+        Lose.SetActive(true);
         Time.timeScale = 0;
-        // Chuyển đến scene thua
-        SceneManager.LoadScene(Lost); // Thay "ThuaScene" bằng tên của scene thua của bạn
+        
+        
     }
 
 
