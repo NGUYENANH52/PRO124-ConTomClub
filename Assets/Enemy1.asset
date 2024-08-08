@@ -20,6 +20,8 @@ MonoBehaviour:
   health: 100
   armor: 0
   explosionEffect: {fileID: 2683037322165241152, guid: 6900c81c84f1f42449189201f414d83a, type: 3}
+  explosionEffectCoin: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
+  coinDropAmount: 100
   scoreValue: 126
   expValue: 158
   enemyPrefab: {fileID: 1477896164804863537, guid: e39545ccf38e78b40a1f5af9b729f0e5, type: 3}

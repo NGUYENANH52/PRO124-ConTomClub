@@ -14,7 +14,7 @@ public class BulletManager : MonoBehaviour
     {
         currentBulletData = normalBulletData; // Mặc định sử dụng đạn thường
     }
-
+        
     public BulletData GetCurrentBulletData()
     {
         return currentBulletData;

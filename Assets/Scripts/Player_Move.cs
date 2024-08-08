@@ -10,10 +10,11 @@ public class Player_move : MonoBehaviour
     [SerializeField] private float _speedMove;
     private Rigidbody2D _rb;
     //Attack
-    [SerializeField] private GameObject _bullet;
+    //[SerializeField] private GameObject _bullet;
     [SerializeField] Transform _firePoint;
     [SerializeField] private float _atkSpeed, _cooldown = 0;
     public BulletManager bulletManager;
+    public BulletData BulletData;
     //Animator
     private Animator _anim;
     private String currentAnim;
@@ -67,31 +68,33 @@ public class Player_move : MonoBehaviour
         {
             return;
         }
-        Instantiate(_bullet, _firePoint.position, transform.rotation);
+        
+        //Instantiate(_bullet, _firePoint.position, transform.rotation);
+        //_cooldown = _atkSpeed;
+
+
+        //thay doi hieu ung dan
+        if (bulletManager == null)
+        {
+            Debug.LogError("BulletManager is not assigned.");
+            return;
+        }
+
+        BulletData currentBulletData = bulletManager.GetCurrentBulletData();
+        if (currentBulletData == null)
+        {
+            Debug.LogError("Current BulletData is null.");
+            return;
+        }
+
+        GameObject bullet = Instantiate(currentBulletData.bulletPrefab, _firePoint.position, _firePoint.rotation);
+        if (bullet == null)
+        {
+            Debug.LogError("Bullet prefab is null.");
+            return;
+        }
+
+        bullet.GetComponent<bulletScript>().Initialize(currentBulletData);        
         _cooldown = _atkSpeed;
-
-
-        // thay doi hieu ung dan
-        //if (bulletManager == null)
-        //{
-        //    Debug.LogError("BulletManager is not assigned.");
-        //    return;
-        //}
-
-        //BulletData currentBulletData = bulletManager.GetCurrentBulletData();
-        //if (currentBulletData == null)
-        //{
-        //    Debug.LogError("Current BulletData is null.");
-        //    return;
-        //}
-
-        //GameObject bullet = Instantiate(currentBulletData.bulletPrefab, _firePoint.position, _firePoint.rotation);
-        //if (bullet == null)
-        //{
-        //    Debug.LogError("Bullet prefab is null.");
-        //    return;
-        //}
-
-        //bullet.GetComponent<bulletScript>().Initialize(currentBulletData);
     }
 }

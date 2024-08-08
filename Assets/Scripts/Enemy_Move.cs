@@ -27,6 +27,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private GameObject iceEffectSprite;
     // Wave end
     private EnemySpawner enemySpawner;
+    private CoinManager coinManager; // Thêm biến quản lý đồng xu
+    public GameObject coinPrefab;
 
 
     void Start()
@@ -37,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
         currentSpeed = enemyData.originalSpeed; // Khởi tạo với tốc độ gốc của quái vật
         scoreManager = FindObjectOfType<ScoreManager>();
         playerExperience = FindObjectOfType<PlayerExperience>();
+        coinManager = FindObjectOfType<CoinManager>(); // Tìm đối tượng CoinManager trong scene
         enemySpawner = FindObjectOfType<EnemySpawner>();// Tìm đối tượng EnemySpawner trong scene
     }
 
@@ -98,18 +101,31 @@ public class EnemyMovement : MonoBehaviour
             {
                 playerExperience.AddExperience(enemyData.expValue);
             }
+           
             // Gọi phương thức OnEnemyDestroyed của EnemySpawner khi quái vật bị tiêu diệt
             if (enemySpawner != null)
             {
                 enemySpawner.OnEnemyDestroyed();
             }
-            Destroy(gameObject);
-
-            Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);
+            DropCoins();
+            Instantiate(enemyData.explosionEffectCoin, transform.position, transform.rotation);
+            Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);           
             Destroy(gameObject); // Hủy quái vật khi máu <= 0
         }
     }
-
+    void DropCoins()
+    {
+        int numberOfCoins = enemyData.coinDropAmount; // Số lượng đồng xu rơi ra từ EnemyData
+        for (int i = 0; i < numberOfCoins; i++)
+        {
+            Instantiate(coinPrefab, transform.position, Quaternion.identity);
+        }
+        // Cập nhật số lượng xu trong CoinManager
+        if (coinManager != null)
+        {
+            coinManager.AddCoins(numberOfCoins);
+        }
+    }
     public void StartSlow(float duration)
     {
         if (!isSlowedDown)

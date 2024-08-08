@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5746963800028342505}
   - component: {fileID: 7884787468067242350}
   - component: {fileID: 438133860057141479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ice_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 667843063, guid: 22a40af72f8b83b43bc589c75891747b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

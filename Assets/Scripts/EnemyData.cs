@@ -13,6 +13,8 @@ public class EnemyData : ScriptableObject
     public int health;
     public int armor;
     public GameObject explosionEffect;
+    public GameObject explosionEffectCoin;
+    public int coinDropAmount; // Số lượng xu rơi ra
     public int scoreValue; // so diem khi tieu diet quai
     public int expValue; // so exp
     public GameObject enemyPrefab;

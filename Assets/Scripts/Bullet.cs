@@ -12,17 +12,20 @@ public class bulletScript : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, bulletData.lifetime);   
+        Destroy(gameObject, bulletData.lifetime);
+        // update 
+        bulletData = FindObjectOfType<BulletManager>().GetCurrentBulletData(); // Lấy dữ liệu đạn hiện tại từ BulletManager
     }
 
     void Update()
     {
         _rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
     }
+    // update
     public void Initialize(BulletData data)
     {
         bulletData = data;
-        Destroy(gameObject, bulletData.lifetime);   
+        Destroy(gameObject, bulletData.lifetime);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

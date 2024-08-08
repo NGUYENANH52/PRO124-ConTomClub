@@ -211,6 +211,7 @@ MonoBehaviour:
   bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   fireEffectSprite: {fileID: 5771324348775153019}
   iceEffectSprite: {fileID: 569727168272928046}
+  coinPrefab: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
 --- !u!61 &2068921857491759571
 BoxCollider2D:
   m_ObjectHideFlags: 0
