@@ -9550,7 +9550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delaySecond: 0
   nameScene: Pause
-  nameScene2: level2
+  nameScene2: level3
   nameScene3: level3
   nameScene4: level4
   nameScene5: level5
