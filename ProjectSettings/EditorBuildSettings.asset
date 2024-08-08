@@ -19,32 +19,32 @@ EditorBuildSettings:
     guid: 71b2aec259d8b694d82ece7aa913853e
   - enabled: 1
     path: Assets/Scenes/level2.unity
-    guid: dce9d723aec47534ea71c00021762a3f
+    guid: 43977dd1db24adf4fbb1b2d853d8b02b
   - enabled: 1
     path: Assets/Scenes/level3.unity
-    guid: aae21bd447455e64c97bda38be55b15f
+    guid: b064508bd4212d14eb60f5a27f2d0b72
   - enabled: 1
     path: Assets/Scenes/level4.unity
-    guid: 923a5742769f617449a0f116abc88223
+    guid: d1a4405c9fd969845b6ab1edcf577739
   - enabled: 1
     path: Assets/Scenes/level5.unity
-    guid: 4f8c55d4c6b8d764cb41618cd0e00dde
+    guid: 423bb68caa60b00419c755c0ef1cf24c
   - enabled: 1
     path: Assets/Scenes/level6.unity
-    guid: cf7adbf6bff48e64c929fa6585b938b3
+    guid: 5c1fdfd0ec2542e4188d2b2366a728a6
   - enabled: 1
     path: Assets/Scenes/level7.unity
-    guid: c7688dae509a5e440bf26a33a3fc6c16
+    guid: ea74eba8385c17c47afc0922e3e17d41
   - enabled: 1
     path: Assets/Scenes/level8.unity
-    guid: d63f9dc7db6916946b0ba00e35a74b20
+    guid: 57fc012e6f8eb924b99fc8f59cafec4c
   - enabled: 0
     path: Assets/Scenes/End_Lose.unity
     guid: e7b9679c10aad244ea228d5e57e0ca6b
   - enabled: 0
     path: Assets/Scenes/End_Win.unity
     guid: f4dc86e8860b114428b2414317cde35b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Setting.unity
-    guid: 9664190f4c68e534f9b76a3f9f9f54e4
+    guid: 9cf64bf100559ea4882891f187914b6a
   m_configObjects: {}
