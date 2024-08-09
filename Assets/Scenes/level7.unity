@@ -2777,7 +2777,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 801b6a42939392c4bb273280a3f01c7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7660,6 +7660,90 @@ Transform:
   - {fileID: 131662879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1091676504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091676506}
+  - component: {fileID: 1091676505}
+  m_Layer: 0
+  m_Name: hinh-nen-vu-tru-30
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1091676505
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091676504}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -3
+  m_Sprite: {fileID: 21300000, guid: ae9383fe0bdb04f49a47e4ac1ab20355, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.75, y: 12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1091676506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091676504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0023, y: 1.1244, z: 0}
+  m_LocalScale: {x: 0.8740004, y: 0.7068, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162832855
 GameObject:
   m_ObjectHideFlags: 0
@@ -10183,9 +10267,9 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9a1d1e37ec9421e4d84baba2621414a4, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 250ad10c6846b9744876376ebcb5aa30, type: 2}
+    m_Data: {fileID: 11400000, guid: 0800084e8a7964b419b4e2dbf462ee45, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: afc735e99583140429fc9ad3f9124d4d, type: 2}
+    m_Data: {fileID: 11400000, guid: 795a8261e44d27642b25df6586be35b7, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 6dd1a52e36876104dbefdc0eb0a00525, type: 2}
   m_TileSpriteArray:
@@ -10196,9 +10280,9 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1091056544, guid: 90b90e56abc4f42408e61d08660c2007, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -857833688, guid: 90b90e56abc4f42408e61d08660c2007, type: 3}
+    m_Data: {fileID: 1711831411, guid: 90b90e56abc4f42408e61d08660c2007, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -802101799, guid: 90b90e56abc4f42408e61d08660c2007, type: 3}
+    m_Data: {fileID: -523444763, guid: 90b90e56abc4f42408e61d08660c2007, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 1597897950, guid: 90b90e56abc4f42408e61d08660c2007, type: 3}
   m_TileMatrixArray:
@@ -13479,3 +13563,4 @@ SceneRoots:
   - {fileID: 1940423672}
   - {fileID: 66352259}
   - {fileID: 1050134327}
+  - {fileID: 1091676506}
