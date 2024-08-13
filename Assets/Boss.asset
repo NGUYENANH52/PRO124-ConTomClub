@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e86727c61fcf4645945b578e8b6a544, type: 3}
+  m_Name: Boss
+  m_EditorClassIdentifier: 
+  enemyName: "Qu\xE1i Gi\xE1p"
+  speed: 0.5
+  originalSpeed: 0.5
+  currentSpeed: 0.5
+  damage: 100
+  health: 500
+  armor: 25
+  explosionEffect: {fileID: 9147113719716716373, guid: f8a39829d750fd94c8c032110d441d1d, type: 3}
+  explosionEffectCoin: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
+  coinDropAmount: 350
+  scoreValue: 500
+  expValue: 0
+  enemyPrefab: {fileID: 7722727316423615391, guid: 8fb5d3e9665cfaf47a7820d303cd7097, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   damage: 7
   health: 100
   armor: 0
-  explosionEffect: {fileID: 2683037322165241152, guid: 6900c81c84f1f42449189201f414d83a, type: 3}
+  explosionEffect: {fileID: 9110240356158735849, guid: 745bf32a42cb75b448b6c2be3f10d91e, type: 3}
   explosionEffectCoin: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
   coinDropAmount: 100
   scoreValue: 126

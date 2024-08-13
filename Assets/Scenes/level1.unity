@@ -9273,7 +9273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: _speedMove
-      value: 500
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: bulletManager
@@ -13165,8 +13165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
-  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
+  - {fileID: 11400000, guid: d0bb64e512a643243a53013978ac7ae5, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
   timeBetweenWaves: 5
