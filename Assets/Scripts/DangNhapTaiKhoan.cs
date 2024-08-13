@@ -34,11 +34,11 @@ public class DangNhapTaiKhoan : MonoBehaviour
             string get = www.downloadHandler.text;
             if (get == "empty")
             {
-                thongbao.text = "Vui lòng nhập đầy đủ thông tin đăng nhập";
+                thongbao.text = "Tài khoản hoặc Mật khẩu không được để trống";
             }
             else if (get == "" || get == null)
             {
-                thongbao.text = "Tài khoản hoặc mật khẩu không chính xác";
+                thongbao.text = "Tài khoản hoặc Mật khẩu không chính xác";
             }
             else if (get.Contains("Lỗi"))
             {
