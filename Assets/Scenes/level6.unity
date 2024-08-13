@@ -9273,7 +9273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: _speedMove
-      value: 1000
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: bulletManager
