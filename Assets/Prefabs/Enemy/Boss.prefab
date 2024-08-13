@@ -84,6 +84,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3288159605130653329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4389646799543621518}
+  m_Layer: 5
+  m_Name: Effect Positon
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4389646799543621518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3288159605130653329}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.909, z: 0.29496032}
+  m_LocalScale: {x: 0.4452768, y: 0.4452768, z: 0.4452768}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7621375264198305041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4267108991369538723
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +323,7 @@ Transform:
   - {fileID: 4210280315019002830}
   - {fileID: 3053819324767110606}
   - {fileID: 3017297277348051260}
+  - {fileID: 4389646799543621518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4954847952715700906
@@ -347,7 +379,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.114349246, y: 0.52042544}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -358,7 +390,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2286985, y: 2.0408506}
   m_EdgeRadius: 0
 --- !u!50 &1217771876955941065
 Rigidbody2D:
@@ -401,8 +433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 4fe09270e7acdce49ae93d5022af84d8, type: 2}
   bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
-  fireEffectSprite: {fileID: 3550417733891429122, guid: 28b3d40ec1e18054586a8972a6ca2f4f, type: 3}
-  iceEffectSprite: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}
+  effectPosition: {fileID: 4389646799543621518}
+  fireEffectSprite: {fileID: 4218445006832910198, guid: 003728ec3aa3c4948b1c487ea0c5d81c, type: 3}
+  iceEffectSprite: {fileID: 6904329062149275493, guid: b20536b0c51ec364da67a764626df170, type: 3}
   coinPrefab: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
 --- !u!212 &8771256662219173549
 SpriteRenderer:

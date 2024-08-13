@@ -11,13 +11,14 @@ public enum BulletType
 [CreateAssetMenu(fileName = "BulletData",menuName = "GameData/BulletData",order = 10)]
 public class BulletData : ScriptableObject 
 {
-    public string Name;
-    public float speed;
-    public float lifetime;
-    public int damage;
+    public string Name;// Tên loại đạn
+    public float speed;// Tốc độ viên đạn
+    public float lifetime;// Thời gian hủy viên đạn
+    public int damage;// Sát thương
     public GameObject expolsionEffect;
     //Ice_Bullet
-    public float slowDownDuration;
+    public float slowDownPercentage;// Phần trăm làm chậm
+    public float slowDownDuration;// Thười gian làm chậm
     //Fire_Bullet
     public float burnDamagePercentage; // Phần trăm sát thương đốt
     public float burnDuration; // Thời gian đốt
