@@ -162,3 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletData: {fileID: 11400000, guid: 6dafd2da2f5129648ae225a7ef7a2a7c, type: 2}
+  availableSkills:
+  - skillName: 
+    level: 0
+    maxLevel: 0
+    effectValue: 0

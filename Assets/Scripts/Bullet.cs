@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 
 public class bulletScript : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class bulletScript : MonoBehaviour
 
     void Update()
     {
-        _rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
+        //_rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
+        _rb.AddForce(transform.up * bulletData.speed, ForceMode2D.Impulse);
     }
     // update
     public void Initialize(BulletData data)

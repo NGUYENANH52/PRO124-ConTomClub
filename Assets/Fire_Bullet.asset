@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fire_Bullet
   m_EditorClassIdentifier: 
   Name: Fire_Bullet
-  speed: 1500
-  lifetime: 2.5
+  speed: 1
+  lifetime: 0.5
   damage: 30
   expolsionEffect: {fileID: 3550417733891429122, guid: 28b3d40ec1e18054586a8972a6ca2f4f, type: 3}
   slowDownDuration: 0
