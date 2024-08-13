@@ -36,13 +36,13 @@ public class Player_move : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         Vector2 movement = new Vector2(horizontal, 0).normalized;
-        _rb.velocity = movement * _speedMove * Time.deltaTime;
+        _rb.AddForce(movement * _speedMove, ForceMode2D.Impulse);
 
         if (Math.Abs(horizontal) > 0.1f)
         {
             changeAnim("run");
             transform.rotation = Quaternion.Euler(new Vector3(0, (horizontal > 0.1f) ? 0 : -180, 0));
-            _rb.velocity = movement * _speedMove * Time.deltaTime;
+            _rb.AddForce(movement * _speedMove, ForceMode2D.Impulse);
         }
         else
         {
