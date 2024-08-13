@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wave1_3
   m_EditorClassIdentifier: 
   enemyTypes:
-  - {fileID: 11400000, guid: 7b5efcc1d0bae574899b5097ddb2be05, type: 2}
-  - {fileID: 11400000, guid: cb8dd2838ba7afa42904303b2a88d30e, type: 2}
-  - {fileID: 11400000, guid: 9c57b734d32b3fa49ac9d6115534eb7d, type: 2}
-  enemyCounts: 080000000a00000005000000
+  - {fileID: 11400000, guid: 7e71ad0aff3099c49a9ac651d3b521d8, type: 2}
+  - {fileID: 11400000, guid: 1fee81befdb2f69489c8cb475f933c58, type: 2}
+  - {fileID: 11400000, guid: 1fee81befdb2f69489c8cb475f933c58, type: 2}
+  enemyCounts: 070000000700000006000000
   spawnInterval: 2

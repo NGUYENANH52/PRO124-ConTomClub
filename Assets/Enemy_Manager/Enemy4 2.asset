@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e86727c61fcf4645945b578e8b6a544, type: 3}
-  m_Name: Elite
+  m_Name: Enemy4 2
   m_EditorClassIdentifier: 
   enemyName: "Qu\xE1i Gi\xE1p"
-  speed: 0.5
-  originalSpeed: 0.5
-  currentSpeed: 0.5
-  damage: 50
-  health: 250
-  armor: 25
-  explosionEffect: {fileID: 9147113719716716373, guid: 348bf30359a0a3b4a8e4b02671eaa5c6, type: 3}
+  speed: 1
+  originalSpeed: 1
+  currentSpeed: 1
+  damage: 15
+  health: 70
+  armor: 15
+  explosionEffect: {fileID: 9110240356158735849, guid: 745bf32a42cb75b448b6c2be3f10d91e, type: 3}
   explosionEffectCoin: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
-  coinDropAmount: 200
+  coinDropAmount: 300
   scoreValue: 300
-  expValue: 250
-  enemyPrefab: {fileID: 3571683193540808731, guid: 5b2671354f9483b4c8ae4c8c03354bd1, type: 3}
+  expValue: 150
+  enemyPrefab: {fileID: 4648299730747102877, guid: 578fee5410c58954c943ec15890f6938, type: 3}

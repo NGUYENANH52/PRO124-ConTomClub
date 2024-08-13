@@ -94,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.14991307, y: -0.14991254}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.3278008, y: 1.299825}
   m_EdgeRadius: 0
 --- !u!50 &5929687326873231596
 Rigidbody2D:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8917efdc0f9a77243afc971c90813a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 769a9cb078a757944bb9ecef81185d6a, type: 2}
+  enemyData: {fileID: 11400000, guid: 624b12f83b90be54db0d8f22524527dc, type: 2}
   bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   fireEffectSprite: {fileID: 3550417733891429122, guid: 28b3d40ec1e18054586a8972a6ca2f4f, type: 3}
   iceEffectSprite: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}

@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8917efdc0f9a77243afc971c90813a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 0}
+  enemyData: {fileID: 11400000, guid: 4fa18b0fa2f4e3b4fb71203a5136fe30, type: 2}
   bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   fireEffectSprite: {fileID: 3550417733891429122, guid: 28b3d40ec1e18054586a8972a6ca2f4f, type: 3}
   iceEffectSprite: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}

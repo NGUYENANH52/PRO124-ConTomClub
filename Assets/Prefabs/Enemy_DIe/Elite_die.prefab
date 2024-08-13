@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9128579688921461444}
   - component: {fileID: 7502619647251982640}
+  - component: {fileID: 8701653671981992038}
   m_Layer: 0
   m_Name: Elite_die
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8701653671981992038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147113719716716373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bcd7f1bef026a408f7b8c62f44c049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionDuration: 0.2
