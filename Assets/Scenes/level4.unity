@@ -10047,8 +10047,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 814072876904768233, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1404608160}
   m_SourcePrefab: {fileID: 100100000, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+--- !u!1 &1404608159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 814072876904768233, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+  m_PrefabInstance: {fileID: 1404608158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404608160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404608159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c807934ab48c7b24daa3399161b7cc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentExperience: 0
+  currentLevel: 1
+  levelData: {fileID: 11400000, guid: 930cc0070e8d0d74da2b5c09176a9d95, type: 2}
 --- !u!1 &1425698312
 GameObject:
   m_ObjectHideFlags: 0
@@ -13964,11 +13987,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
-  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
+  - {fileID: 11400000, guid: 48ecca5abe7b91c49b7039567274742b, type: 2}
+  - {fileID: 11400000, guid: 7078ec590e2266541b1adc68ca4905cc, type: 2}
+  - {fileID: 11400000, guid: 24b2febd83fd21f4cad103ced63371da, type: 2}
+  - {fileID: 11400000, guid: 75d01b70fd293fe448860ad7bfe3b4e1, type: 2}
+  - {fileID: 11400000, guid: 6d8707e780f6208498d2396ae15ea687, type: 2}
+  - {fileID: 11400000, guid: a437edaf6adad9d48abcb01564ba7050, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 10
   Win: {fileID: 391428200}
 --- !u!4 &2083249838
 Transform:
