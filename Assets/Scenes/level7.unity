@@ -13167,11 +13167,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
-  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
+  - {fileID: 11400000, guid: 9cdbcc0df6dfb6348a3b5c0b390fef40, type: 2}
+  - {fileID: 11400000, guid: 3529fa512e2001b4283818c9e4f1de22, type: 2}
+  - {fileID: 11400000, guid: 232e18737c9965240abac38cec76c593, type: 2}
+  - {fileID: 11400000, guid: 4d910e5fb2fc93b40905003bb3be7082, type: 2}
+  - {fileID: 11400000, guid: 53a7bd5fa37137245bc8049271a77865, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 10
   Win: {fileID: 391428200}
 --- !u!4 &2083249838
 Transform:

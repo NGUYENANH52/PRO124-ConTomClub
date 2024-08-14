@@ -13312,11 +13312,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
-  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
+  - {fileID: 11400000, guid: 1a35b30b2916df540a2facdc2945b1d0, type: 2}
+  - {fileID: 11400000, guid: fa7977c3e52a5a143b4827b8a692f221, type: 2}
+  - {fileID: 11400000, guid: 6cb0373a36027e74080d8377bebc1b66, type: 2}
+  - {fileID: 11400000, guid: 530a2ecca416f704698a205898621d3b, type: 2}
+  - {fileID: 11400000, guid: b2ad3cea76c1d634aa18382f43dbe8bf, type: 2}
+  - {fileID: 11400000, guid: b027bc97359906a438da6ea3645b477f, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 10
   Win: {fileID: 391428200}
 --- !u!4 &2083249838
 Transform:
