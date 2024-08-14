@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Normal_Bullet
   speed: 10
-  lifetime: 2
+  lifetime: 1.5
   damage: 40
   expolsionEffect: {fileID: 517794104306580244, guid: fa946203ab2876549959825bd0cc4559, type: 3}
   slowDownPercentage: 0

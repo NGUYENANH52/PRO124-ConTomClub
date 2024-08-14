@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ice_Bullet
   speed: 10
-  lifetime: 2
+  lifetime: 1.5
   damage: 35
   expolsionEffect: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}
   slowDownPercentage: 30

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Poison_Bullet
   speed: 10
-  lifetime: 2
+  lifetime: 1.5
   damage: 25
   expolsionEffect: {fileID: 517794104306580244, guid: 3775c865ffe20eb409f2ab1d10d81738, type: 3}
   slowDownPercentage: 20
