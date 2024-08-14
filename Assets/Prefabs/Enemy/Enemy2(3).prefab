@@ -206,8 +206,12 @@ Transform:
   - {fileID: 6325129997718951915}
   - {fileID: 6388506474127665190}
   - {fileID: 7269921561802885511}
+<<<<<<< HEAD
   - {fileID: 713807318247389116}
   - {fileID: 5276990344662059231}
+=======
+  - {fileID: 1712579000654223065}
+>>>>>>> f38469e6d23bc18a437766462104ad300656d75d
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4959735104470501746
@@ -263,7 +267,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.042832404, y: 0}
+  m_Offset: {x: -0.21048492, y: 0.2794109}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -274,7 +278,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7709808, y: 1}
+  m_Size: {x: 1.5698448, y: 1.5588216}
   m_EdgeRadius: 0
 --- !u!50 &3882435813836459102
 Rigidbody2D:
@@ -317,8 +321,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: f264e75a34e49e94fbcbb8dd0eddc559, type: 2}
   bulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
-  fireEffectSprite: {fileID: 3550417733891429122, guid: 28b3d40ec1e18054586a8972a6ca2f4f, type: 3}
-  iceEffectSprite: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}
+  effectPosition: {fileID: 1712579000654223065}
+  fireEffectSprite: {fileID: 4218445006832910198, guid: 003728ec3aa3c4948b1c487ea0c5d81c, type: 3}
+  iceEffectSprite: {fileID: 6904329062149275493, guid: b20536b0c51ec364da67a764626df170, type: 3}
   coinPrefab: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
 --- !u!212 &8626751218750476337
 SpriteRenderer:
@@ -372,6 +377,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5231889452231598716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712579000654223065}
+  m_Layer: 5
+  m_Name: Effect Positon
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1712579000654223065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231889452231598716}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.06, y: 1.73, z: 0.11152247}
+  m_LocalScale: {x: 1.0000159, y: 1.0000159, z: 1.0000159}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7060021708840900560}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5843003296006602262
 GameObject:
   m_ObjectHideFlags: 0
