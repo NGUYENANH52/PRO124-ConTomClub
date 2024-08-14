@@ -18,10 +18,10 @@ public class bulletScript : MonoBehaviour
         bulletData = FindObjectOfType<BulletManager>().GetCurrentBulletData(); // Lấy dữ liệu đạn hiện tại từ BulletManager
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //_rb.velocity = transform.up * bulletData.speed * Time.deltaTime;
-        _rb.AddForce(transform.up * bulletData.speed, ForceMode2D.Impulse);
+        _rb.AddForce(transform.up * bulletData.speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
     }
     // update
     public void Initialize(BulletData data)

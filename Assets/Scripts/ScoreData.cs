@@ -1,20 +1,26 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ScoreData", menuName = "GameData/ScoreData",order = 2)]
+[CreateAssetMenu(fileName = "ScoreData", menuName = "GameData/ScoreData", order = 2)]
 public class ScoreData : ScriptableObject
 {
     public int score;
     public int highScore;
-    public void SaveHighScore()
+
+    // Hàm này sẽ lưu high score của một level cụ thể
+    public void SaveHighScore(int level)
     {
-        PlayerPrefs.SetInt("HighScore",highScore);
+        string key = "HighScore_Level_" + level;
+        PlayerPrefs.SetInt(key, highScore);
         PlayerPrefs.Save();
     }
-    public void LoadHighScore()
+
+    // Hàm này sẽ load high score của một level cụ thể
+    public void LoadHighScore(int level)
     {
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        string key = "HighScore_Level_" + level;
+        highScore = PlayerPrefs.GetInt(key, 0);
     }
 }

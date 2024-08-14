@@ -251,26 +251,36 @@ public class EnemyMovement : MonoBehaviour
             poisonEndTime = Time.time + duration;
             isPoisoned = true;
 
-            // Hủy hiệu ứng băng và lửa nếu có
-            Destroy(currentFireEffect);
-            Destroy(currentIceEffect);
+            // Dừng các hiệu ứng đốt và làm chậm hiện có để tránh xung đột
+            StopBurning();
+            StopSlow();
 
-            /*if (poisonCoroutine != null)
+            // Bắt đầu gây sát thương độc
+            if (poisonCoroutine != null)
             {
                 StopCoroutine(poisonCoroutine);
-            }*/
+            }
             poisonCoroutine = StartCoroutine(PoisonDamageCoroutine(delay));
 
-            // Thêm hiệu ứng độc
+            // Chỉ hiển thị hiệu ứng độc
             poisonEffectSprite.transform.position = effectPosition.position;
             currentPoisonEffect = Instantiate(poisonEffectSprite, effectPosition.position, Quaternion.identity);
             currentPoisonEffect.transform.SetParent(effectPosition);
 
-            // Nếu quái vật chưa bị làm chậm, thêm hiệu ứng làm chậm
-            if (!isSlowedDown)
+            // Áp dụng hiệu ứng làm chậm mà không hiển thị hiệu ứng băng
+            currentSpeed = enemyData.originalSpeed * (1 - bulletData.slowDownPercentage / 100f);
+            isSlowedDown = true;
+            slowDownEndTime = Time.time + bulletData.slowDownDuration;
+
+            // Áp dụng sát thương đốt nhưng không hiển thị hiệu ứng lửa
+            burnDamage = Mathf.RoundToInt(enemyData.health * bulletData.burnDamagePercentage);
+            burnEndTime = Time.time + duration;
+            isBurning = true;
+            if (burnCoroutine != null)
             {
-                StartSlow(bulletData.slowDownPercentage, bulletData.slowDownDuration);
+                StopCoroutine(burnCoroutine);
             }
+            burnCoroutine = StartCoroutine(BurnDamageCoroutine());
         }
     }
 

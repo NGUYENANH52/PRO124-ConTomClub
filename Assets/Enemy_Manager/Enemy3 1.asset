@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Enemy3 1
   m_EditorClassIdentifier: 
   enemyName: "Qu\xE1i Gi\xE1p"
-  speed: 1
-  originalSpeed: 1
-  currentSpeed: 1
+  speed: 0.9
+  originalSpeed: 0.9
+  currentSpeed: 0.9
   damage: 10
-  health: 60
-  armor: 10
+  health: 150
+  armor: 50
   explosionEffect: {fileID: 9110240356158735849, guid: 745bf32a42cb75b448b6c2be3f10d91e, type: 3}
   explosionEffectCoin: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
   coinDropAmount: 200
