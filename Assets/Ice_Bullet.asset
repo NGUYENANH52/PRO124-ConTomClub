@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: Ice_Bullet
   m_EditorClassIdentifier: 
   Name: Ice_Bullet
-  speed: 5
-  lifetime: 0.5
+  speed: 0.8
+  lifetime: 1
   damage: 35
   expolsionEffect: {fileID: 3550417733891429122, guid: fd25986756dc5ec4c840551d2142ea55, type: 3}
-  slowDownPercentage: 90
+  slowDownPercentage: 30
   slowDownDuration: 2
   burnDamagePercentage: 0
   burnDuration: 0
   burnDelay: 0
+  poisonDamagePercentage: 0
+  poisonDuration: 0
+  poisonDelay: 0
   bulletType: 1
   bulletPrefab: {fileID: 435215709044660800, guid: 21520b47b7f7f2b42ae8ef340baef5fb, type: 3}

@@ -42,16 +42,21 @@ public class bulletScript : MonoBehaviour
             {
                 switch (bulletData.bulletType)
                 {
-                    case BulletType.Normal:
+                    case BulletType.Normal: // Đạn thường
                         enemy.TakeDamage(bulletData.damage);
                         break;
-                    case BulletType.Ice_Bullet:
+                    case BulletType.Ice_Bullet: // Đạn băng
                         enemy.TakeDamage(bulletData.damage);
                         enemy.StartSlow(bulletData.slowDownPercentage, bulletData.slowDownDuration);
                         break;
                     case BulletType.Fire_Bullet: // Loại đạn lửa
                         enemy.TakeDamage(bulletData.damage);
                         enemy.StartBurning(bulletData.burnDamagePercentage, bulletData.burnDuration);
+                        break;
+                    case BulletType.Poison_Bullet: // Đạn độc
+                        enemy.TakeDamage(bulletData.damage);
+                        enemy.StartPoison(bulletData.poisonDamagePercentage, bulletData.poisonDuration, bulletData.poisonDelay);
+                        enemy.StartSlow(bulletData.slowDownPercentage, bulletData.slowDownDuration); // Thêm hiệu ứng làm chậm
                         break;
                 }
             }

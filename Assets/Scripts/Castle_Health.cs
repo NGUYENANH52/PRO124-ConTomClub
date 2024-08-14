@@ -17,13 +17,8 @@ public class CastleHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        if (currentHealth < 0)
-        {
-            currentHealth = 0;
-        }
-
         UpdateHealthUI();
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         { 
             GameOver(); 
         }
@@ -32,21 +27,12 @@ public class CastleHealth : MonoBehaviour
       
     private void UpdateHealthUI()
     {
-      
-        healthSlider.value = (float)currentHealth / 1 ;
+        healthSlider.value = (float)currentHealth ;
     }
 
     private void GameOver()
     {
         Lose.SetActive(true);
-        Time.timeScale = 0;
-        
-        
+        Time.timeScale = 0; 
     }
-
-
-
-
-
-
 }

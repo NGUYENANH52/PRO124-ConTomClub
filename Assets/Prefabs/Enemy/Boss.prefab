@@ -436,6 +436,7 @@ MonoBehaviour:
   effectPosition: {fileID: 4389646799543621518}
   fireEffectSprite: {fileID: 4218445006832910198, guid: 003728ec3aa3c4948b1c487ea0c5d81c, type: 3}
   iceEffectSprite: {fileID: 6904329062149275493, guid: b20536b0c51ec364da67a764626df170, type: 3}
+  poisonEffectSprite: {fileID: 6305086361797106697, guid: 13131dfed33594348b7832295a1f210c, type: 3}
   coinPrefab: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
 --- !u!212 &8771256662219173549
 SpriteRenderer:

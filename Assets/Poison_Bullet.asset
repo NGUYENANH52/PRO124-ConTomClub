@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85c5c10efc24a0b4ab954623ada91dcd, type: 3}
-  m_Name: Normal_Bullet
+  m_Name: Poison_Bullet
   m_EditorClassIdentifier: 
-  Name: Normal_Bullet
+  Name: Poison_Bullet
   speed: 0.8
   lifetime: 1
-  damage: 40
-  expolsionEffect: {fileID: 517794104306580244, guid: fa946203ab2876549959825bd0cc4559, type: 3}
-  slowDownPercentage: 0
+  damage: 25
+  expolsionEffect: {fileID: 517794104306580244, guid: 3775c865ffe20eb409f2ab1d10d81738, type: 3}
+  slowDownPercentage: 10
   slowDownDuration: 0
   burnDamagePercentage: 0
   burnDuration: 0
   burnDelay: 0
-  poisonDamagePercentage: 0
-  poisonDuration: 0
+  poisonDamagePercentage: 0.1
+  poisonDuration: 2
   poisonDelay: 0
-  bulletType: 0
-  bulletPrefab: {fileID: 348725381945217764, guid: 4a4aa496030d4d643b73872637048d4c, type: 3}
+  bulletType: 3
+  bulletPrefab: {fileID: 348725381945217764, guid: b9ded856de3286a4eac4ff546652ec37, type: 3}

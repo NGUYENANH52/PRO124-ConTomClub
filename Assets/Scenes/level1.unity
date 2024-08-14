@@ -695,6 +695,7 @@ MonoBehaviour:
   normalBulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   iceBulletData: {fileID: 11400000, guid: 6dafd2da2f5129648ae225a7ef7a2a7c, type: 2}
   fireBulletData: {fileID: 11400000, guid: caa0db8f7e79ebd40a9fe829492009f2, type: 2}
+  poisonBulletData: {fileID: 11400000, guid: 45b7724f64fe2f64e8a2c96547ec9ef3, type: 2}
 --- !u!4 &55787471
 Transform:
   m_ObjectHideFlags: 0
@@ -1244,6 +1245,7 @@ MonoBehaviour:
   - {fileID: 984644827}
   - {fileID: 1940708561}
   - {fileID: 1285746318}
+  - {fileID: 2016951431}
 --- !u!4 &131662879
 Transform:
   m_ObjectHideFlags: 0

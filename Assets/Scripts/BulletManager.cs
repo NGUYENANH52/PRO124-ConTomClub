@@ -7,6 +7,7 @@ public class BulletManager : MonoBehaviour
     public BulletData normalBulletData; // Thông tin đạn thường
     public BulletData iceBulletData;    // Thông tin đạn băng
     public BulletData fireBulletData;   // Thông tin đạn lửa
+    public BulletData poisonBulletData; // Thông tin đạn độc
 
     private BulletData currentBulletData;
 
@@ -32,6 +33,9 @@ public class BulletManager : MonoBehaviour
                 break;
             case 2:
                 currentBulletData = fireBulletData;
+                break;
+            case 3:
+                currentBulletData = poisonBulletData;
                 break;
             default:
                 Debug.LogWarning("Chỉ số loại đạn không hợp lệ: " + index);

@@ -5,7 +5,8 @@ public enum BulletType
 {
     Normal,
     Ice_Bullet,
-    Fire_Bullet
+    Fire_Bullet,
+    Poison_Bullet
 }
 
 [CreateAssetMenu(fileName = "BulletData",menuName = "GameData/BulletData",order = 10)]
@@ -23,6 +24,10 @@ public class BulletData : ScriptableObject
     public float burnDamagePercentage; // Phần trăm sát thương đốt
     public float burnDuration; // Thời gian đốt
     public float burnDelay; // Thời gian giữa các lần gây sát thương đốt
+    //Poison_Bullet
+    public float poisonDamagePercentage; // Phần trăm sát thương độc
+    public float poisonDuration; // Thời gian độc
+    public float poisonDelay; // Thời gian giữa các lần gây sát thương độc
     //Type_Bullet
     public BulletType bulletType; // Thêm loại đạn
     public GameObject bulletPrefab;

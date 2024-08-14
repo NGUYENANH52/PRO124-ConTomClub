@@ -23,12 +23,19 @@ public class EnemyMovement : MonoBehaviour
     private Coroutine slowCoroutine;
     private Coroutine burnCoroutine;
     [SerializeField] private BulletData bulletData;
+    //Poison_Bullet
+    private bool isPoisoned = false; // Đánh dấu nếu quái vật đang bị độc
+    private float poisonEndTime;
+    private float poisonDamage;
+    private Coroutine poisonCoroutine;
     //Hiệu ứng
     [SerializeField] private Transform effectPosition;
     [SerializeField] private GameObject fireEffectSprite;
     [SerializeField] private GameObject iceEffectSprite;
+    [SerializeField] private GameObject poisonEffectSprite;
     private GameObject currentFireEffect; // Để lưu trữ hiệu ứng hiện tại
     private GameObject currentIceEffect; // Để lưu trữ hiệu ứng hiện tại
+    private GameObject currentPoisonEffect; // Để lưu trữ hiệu ứng hiện tại
     // Wave end
     private EnemySpawner enemySpawner;
     private CoinManager coinManager; // Thêm biến quản lý đồng xu
@@ -87,15 +94,28 @@ public class EnemyMovement : MonoBehaviour
 
     public void TakeDamage(int incomingDamage)
     {
-        int actualDamage = Mathf.Max(incomingDamage - enemyData.armor, 0);
-        currentHealth -= actualDamage;
-        Debug.Log("Quái vật nhận " + actualDamage + " sát thương. Máu hiện tại: " + currentHealth);
+        // Đầu tiên, thử giảm sát thương bằng giáp
+        if (enemyData.armor > 0)
+        {
+            int damageToArmor = Mathf.Min(incomingDamage, enemyData.armor);
+            enemyData.armor -= damageToArmor;
+            incomingDamage -= damageToArmor;
+        }
 
+        // Sát thương còn lại sẽ được áp dụng vào máu
+        if (incomingDamage > 0)
+        {
+            currentHealth -= incomingDamage;
+        }
+
+        Debug.Log("Quái vật nhận " + incomingDamage + " sát thương. Máu hiện tại: " + currentHealth + ", Giáp còn: " + enemyData.armor);
+
+        // Kiểm tra nếu quái vật đã chết
         if (currentHealth <= 0)
         {
-            // Dừng quá trình đốt nếu có
             StopSlow();
             StopBurning();
+            StopPoison();
 
             if (scoreManager != null)
             {
@@ -105,16 +125,15 @@ public class EnemyMovement : MonoBehaviour
             {
                 playerExperience.AddExperience(enemyData.expValue);
             }
-           
-            // Gọi phương thức OnEnemyDestroyed của EnemySpawner khi quái vật bị tiêu diệt
+
             if (enemySpawner != null)
             {
                 enemySpawner.OnEnemyDestroyed();
             }
             DropCoins();
             Instantiate(enemyData.explosionEffectCoin, transform.position, transform.rotation);
-            Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);           
-            Destroy(gameObject); // Hủy quái vật khi máu <= 0
+            Instantiate(enemyData.explosionEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
     void DropCoins()
@@ -224,9 +243,62 @@ public class EnemyMovement : MonoBehaviour
 
         StopBurning(); // Kết thúc quá trình đốt
     }
-
-    /*public bool IsDead()
+    public void StartPoison(float damagePercentage, float duration, float delay)
     {
-        return currentHealth <= 0;
-    }*/
+        if (!isPoisoned)
+        {
+            poisonDamage = Mathf.RoundToInt(enemyData.health * damagePercentage);
+            poisonEndTime = Time.time + duration;
+            isPoisoned = true;
+
+            // Hủy hiệu ứng băng và lửa nếu có
+            Destroy(currentFireEffect);
+            Destroy(currentIceEffect);
+
+            /*if (poisonCoroutine != null)
+            {
+                StopCoroutine(poisonCoroutine);
+            }*/
+            poisonCoroutine = StartCoroutine(PoisonDamageCoroutine(delay));
+
+            // Thêm hiệu ứng độc
+            poisonEffectSprite.transform.position = effectPosition.position;
+            currentPoisonEffect = Instantiate(poisonEffectSprite, effectPosition.position, Quaternion.identity);
+            currentPoisonEffect.transform.SetParent(effectPosition);
+
+            // Nếu quái vật chưa bị làm chậm, thêm hiệu ứng làm chậm
+            if (!isSlowedDown)
+            {
+                StartSlow(bulletData.slowDownPercentage, bulletData.slowDownDuration);
+            }
+        }
+    }
+
+    // Thêm Coroutine để xử lý sát thương độc
+    private IEnumerator PoisonDamageCoroutine(float delay)
+    {
+        while (isPoisoned && Time.time < poisonEndTime && currentHealth > 0)
+        {
+            float poisonDamage = Mathf.RoundToInt(enemyData.health * bulletData.poisonDamagePercentage);
+            TakeDamage((int)poisonDamage);
+            Debug.Log("Quái vật nhận " + poisonDamage + " sát thương độc. Máu hiện tại: " + currentHealth);
+            yield return new WaitForSeconds(delay);
+        }
+        StopPoison(); // Kết thúc quá trình độc
+    }
+
+    // Thêm phương thức StopPoison
+    private void StopPoison()
+    {
+        isPoisoned = false;
+        if (poisonCoroutine != null)
+        {
+            StopCoroutine(poisonCoroutine);
+        }
+        // Hủy hiệu ứng độc
+        if (currentPoisonEffect != null)
+        {
+            Destroy(currentPoisonEffect);
+        }
+    }
 }
