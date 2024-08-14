@@ -16,6 +16,7 @@ public class Scenes : MonoBehaviour
     public string nameScene6 = "level2";
     public string nameScene7 = "level2";
     public string nameScene8 = "level2";
+    public string nameScene9 = "level2";
 
 
     public GameObject popupPause;
@@ -109,6 +110,17 @@ IEnumerator loadAfterDelay3()
     {
         yield return new WaitForSeconds(delaySecond);
         SceneManager.LoadScene(nameScene8);
+        Time.timeScale = 1;
+    }
+    //9
+    public void ModeSelect9()
+    {
+        StartCoroutine(loadAfterDelay9());
+    }
+    IEnumerator loadAfterDelay9()
+    {
+        yield return new WaitForSeconds(delaySecond);
+        SceneManager.LoadScene(nameScene9);
         Time.timeScale = 1;
     }
     public void ShowPopupPause()

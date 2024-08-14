@@ -603,6 +603,7 @@ MonoBehaviour:
   normalBulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   iceBulletData: {fileID: 11400000, guid: 6dafd2da2f5129648ae225a7ef7a2a7c, type: 2}
   fireBulletData: {fileID: 11400000, guid: caa0db8f7e79ebd40a9fe829492009f2, type: 2}
+  poisonBulletData: {fileID: 0}
 --- !u!4 &55787471
 Transform:
   m_ObjectHideFlags: 0
@@ -1068,9 +1069,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1454690062}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: PlayScenes
+      - m_Target: {fileID: 1454690058}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ModeSelect2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7737,12 +7738,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134471985}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0053, y: 0.9144, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6623661, y: 0.7936743, z: -0.0389728}
   m_LocalScale: {x: 1.1195103, y: 1.037532, z: 1.4194895}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2035141197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162832855
 GameObject:
@@ -9634,13 +9635,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delaySecond: 0
   nameScene: Pause
-  nameScene2: level2
+  nameScene2: GameMenu
   nameScene3: level3
   nameScene4: level4
   nameScene5: level5
   nameScene6: level7
   nameScene7: level2
   nameScene8: level2
+  nameScene9: level2
   popupPause: {fileID: 268782837}
   buttonContinues: {fileID: 35773089}
 --- !u!114 &1454690059
@@ -12803,6 +12805,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1627932094}
+  - {fileID: 1134471987}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046088332
@@ -13563,4 +13566,3 @@ SceneRoots:
   - {fileID: 1940423672}
   - {fileID: 66352259}
   - {fileID: 1050134327}
-  - {fileID: 1134471987}

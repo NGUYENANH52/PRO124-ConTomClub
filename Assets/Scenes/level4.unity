@@ -687,6 +687,7 @@ MonoBehaviour:
   normalBulletData: {fileID: 11400000, guid: 3b0d26f0cb6f7e345867fce35d44edb7, type: 2}
   iceBulletData: {fileID: 11400000, guid: 6dafd2da2f5129648ae225a7ef7a2a7c, type: 2}
   fireBulletData: {fileID: 11400000, guid: caa0db8f7e79ebd40a9fe829492009f2, type: 2}
+  poisonBulletData: {fileID: 0}
 --- !u!4 &55787471
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,9 +1153,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1454690062}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: PlayScenes
+      - m_Target: {fileID: 1454690058}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ModeSelect2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10346,13 +10347,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delaySecond: 0
   nameScene: Pause
-  nameScene2: level2
+  nameScene2: GameMenu
   nameScene3: level3
   nameScene4: level5
   nameScene5: level6
   nameScene6: level7
   nameScene7: level8
   nameScene8: level2
+  nameScene9: level2
   popupPause: {fileID: 268782837}
   buttonContinues: {fileID: 35773089}
 --- !u!114 &1454690059
