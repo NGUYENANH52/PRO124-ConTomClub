@@ -17,4 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e71ad0aff3099c49a9ac651d3b521d8, type: 2}
   - {fileID: 11400000, guid: 1fee81befdb2f69489c8cb475f933c58, type: 2}
   enemyCounts: 070000000700000006000000
-  spawnInterval: 2
+  spawnInterval: 1.5

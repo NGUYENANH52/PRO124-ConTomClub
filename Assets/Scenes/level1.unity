@@ -1934,6 +1934,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &301680548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 814072876904768233, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+  m_PrefabInstance: {fileID: 1404608158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &301680555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301680548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c807934ab48c7b24daa3399161b7cc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentExperience: 0
+  currentLevel: 1
+  levelData: {fileID: 11400000, guid: 0885c953120286d4799ee56ae0d4a8be, type: 2}
 --- !u!1 &304195557
 GameObject:
   m_ObjectHideFlags: 0
@@ -9275,7 +9295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: _speedMove
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: bulletManager
@@ -9336,7 +9356,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 814072876904768233, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 301680555}
   m_SourcePrefab: {fileID: 100100000, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
 --- !u!1 &1425698312
 GameObject:
@@ -13168,11 +13191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d00200774b1c8214d80d761fe3e65784, type: 2}
-  - {fileID: 11400000, guid: be044b916a62f45418120bbbfd44ba64, type: 2}
+  - {fileID: 11400000, guid: a7e47bfd1e0a8094e9c37cb21a22ec71, type: 2}
+  - {fileID: 11400000, guid: 50fa8e2000788ef4b80ba790a5affcd7, type: 2}
+  - {fileID: 11400000, guid: f462d5963ff9383468b682acfa2e02c1, type: 2}
+  - {fileID: 11400000, guid: a323beda426f6da4aa2bb90b3932f145, type: 2}
+  - {fileID: 11400000, guid: bbc98e64829fbfb47ac747a1fa452eca, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 5
   Win: {fileID: 391428200}
 --- !u!4 &2083249838
 Transform:

@@ -30,7 +30,6 @@ public class Player_move : MonoBehaviour
     {
         Move();      
         Attack();
-        
     }
     void Move()
     {
@@ -42,7 +41,6 @@ public class Player_move : MonoBehaviour
         {
             changeAnim("run");
             transform.rotation = Quaternion.Euler(new Vector3(0, (horizontal > 0.1f) ? 0 : -180, 0));
-            _rb.AddForce(movement * _speedMove, ForceMode2D.Impulse);
         }
         else
         {
