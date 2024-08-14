@@ -9179,6 +9179,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2793226811337527041, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 24146625b99c9294389feea40ad518a7, type: 2}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: _bullet
       value: 
@@ -13165,8 +13169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
-  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
+  - {fileID: 11400000, guid: d28cf388aa6420847a2a6487144809b5, type: 2}
+  - {fileID: 11400000, guid: 5f0b86a708e665d418715b608077ccf0, type: 2}
+  - {fileID: 11400000, guid: c3ab334bd0485b248a9e3444f5d4286d, type: 2}
+  - {fileID: 11400000, guid: 5b55f323a62e95b4aac63481af063a37, type: 2}
+  - {fileID: 11400000, guid: bff808c8e492bb5479903d38dff8955b, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
   timeBetweenWaves: 5
