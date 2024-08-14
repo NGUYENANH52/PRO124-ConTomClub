@@ -18,7 +18,7 @@ MonoBehaviour:
   currentSpeed: 0.5
   damage: 100
   health: 500
-  armor: 40
+  armor: 150
   explosionEffect: {fileID: 9147113719716716373, guid: f8a39829d750fd94c8c032110d441d1d, type: 3}
   explosionEffectCoin: {fileID: 2208843072134635911, guid: 4e33e71dc033c9e4c8817ced95a1a4fe, type: 3}
   coinDropAmount: 350
