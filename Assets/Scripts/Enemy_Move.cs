@@ -20,11 +20,15 @@ public class EnemyMovement : MonoBehaviour
     private bool isBurning = false; // Đánh dấu nếu quái vật đang bị đốt
     private float burnEndTime;
     private float burnDamage;
+    private Coroutine slowCoroutine;
     private Coroutine burnCoroutine;
     [SerializeField] private BulletData bulletData;
     //Hiệu ứng
+    [SerializeField] private Transform effectPosition;
     [SerializeField] private GameObject fireEffectSprite;
     [SerializeField] private GameObject iceEffectSprite;
+    private GameObject currentFireEffect; // Để lưu trữ hiệu ứng hiện tại
+    private GameObject currentIceEffect; // Để lưu trữ hiệu ứng hiện tại
     // Wave end
     private EnemySpawner enemySpawner;
     private CoinManager coinManager; // Thêm biến quản lý đồng xu
@@ -126,22 +130,51 @@ public class EnemyMovement : MonoBehaviour
             coinManager.AddCoins(numberOfCoins);
         }
     }
-    public void StartSlow(float duration)
+    public void StartSlow(float slowDownPercentage, float duration)
     {
         if (!isSlowedDown)
         {
-            currentSpeed /= 2; // Giảm tốc độ đi một nửa
+            // Giảm tốc độ theo tỷ lệ phần trăm được truyền vào
+            currentSpeed = enemyData.originalSpeed * (1 - slowDownPercentage / 100f);// Đây là phần trăm tốc độ còn lại sau khi bị làm chậm. Với slowDownPercentage = 30, phần còn lại sẽ là 1 - 0.3 = 0.7, tương đương với 70% tốc độ gốc.
             isSlowedDown = true;
             slowDownEndTime = Time.time + duration;
-            iceEffectSprite.SetActive(true);
+
+            // Nếu có một Coroutine đang chạy, dừng nó lại
+            if (slowCoroutine != null)
+            {
+                StopCoroutine(slowCoroutine);
+            }
+            // Bắt đầu Coroutine làm chậm
+            slowCoroutine = StartCoroutine(SlowDownCoroutine(duration));
+            iceEffectSprite.transform.position = effectPosition.position;
+            //Instantiate ra effect băng
+            currentIceEffect = Instantiate(iceEffectSprite, effectPosition.position, Quaternion.identity);
+            currentIceEffect.transform.SetParent(effectPosition);
         }
+    }
+
+    private IEnumerator SlowDownCoroutine(float duration)
+    {
+        while (isSlowedDown && Time.time < slowDownEndTime)
+        {
+            yield return null;
+        }
+        StopSlow(); // Kết thúc quá trình làm chậm
     }
 
     public void StopSlow()
     {
         currentSpeed = enemyData.originalSpeed;
         isSlowedDown = false;
-        iceEffectSprite.SetActive(false);
+        if (slowCoroutine != null)
+        {
+            StopCoroutine(slowCoroutine);
+        }
+        //Hủy effect băng
+        if (currentIceEffect != null)
+        {
+            Destroy(currentIceEffect);
+        }
     }
     public void StartBurning(float damagePercentage, float duration)
     {
@@ -155,7 +188,10 @@ public class EnemyMovement : MonoBehaviour
                 StopCoroutine(burnCoroutine);
             }
             burnCoroutine = StartCoroutine(BurnDamageCoroutine());
-            fireEffectSprite.SetActive(true);
+            fireEffectSprite.transform.position = effectPosition.position;
+            //Instantiate ra effect lửa
+            currentFireEffect = Instantiate(fireEffectSprite, effectPosition.position, Quaternion.identity);
+            currentFireEffect.transform.SetParent(effectPosition);
         }
     }
 
@@ -166,7 +202,11 @@ public class EnemyMovement : MonoBehaviour
         {
             StopCoroutine(burnCoroutine);
         }
-        fireEffectSprite.SetActive(false);
+        //Hủy effect lửa
+        if (currentFireEffect != null)
+        {
+            Destroy(currentFireEffect);
+        }
     }
 
     private IEnumerator BurnDamageCoroutine()

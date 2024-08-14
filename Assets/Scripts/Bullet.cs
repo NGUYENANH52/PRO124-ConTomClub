@@ -47,7 +47,7 @@ public class bulletScript : MonoBehaviour
                         break;
                     case BulletType.Ice_Bullet:
                         enemy.TakeDamage(bulletData.damage);
-                        enemy.StartSlow(bulletData.slowDownDuration);
+                        enemy.StartSlow(bulletData.slowDownPercentage, bulletData.slowDownDuration);
                         break;
                     case BulletType.Fire_Bullet: // Loại đạn lửa
                         enemy.TakeDamage(bulletData.damage);
