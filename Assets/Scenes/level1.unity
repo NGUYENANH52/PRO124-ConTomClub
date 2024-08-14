@@ -9257,6 +9257,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 1469820430532225263, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -9277,22 +9279,11 @@ PrefabInstance:
       propertyPath: _speedMove
       value: 0.1
       objectReference: {fileID: 0}
+>>>>>>> f38469e6d23bc18a437766462104ad300656d75d
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: bulletManager
       value: 
       objectReference: {fileID: 55787470}
-    - target: {fileID: 6163789765562626804, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7159
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163789765562626804, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7159
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163789765562626804, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7159
-      objectReference: {fileID: 0}
     - target: {fileID: 6163789765562626804, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07
@@ -13167,8 +13158,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d00200774b1c8214d80d761fe3e65784, type: 2}
-  - {fileID: 11400000, guid: be044b916a62f45418120bbbfd44ba64, type: 2}
+  - {fileID: 11400000, guid: a7e47bfd1e0a8094e9c37cb21a22ec71, type: 2}
+  - {fileID: 11400000, guid: 50fa8e2000788ef4b80ba790a5affcd7, type: 2}
+  - {fileID: 11400000, guid: f462d5963ff9383468b682acfa2e02c1, type: 2}
+  - {fileID: 11400000, guid: a323beda426f6da4aa2bb90b3932f145, type: 2}
+  - {fileID: 11400000, guid: bbc98e64829fbfb47ac747a1fa452eca, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
   timeBetweenWaves: 10

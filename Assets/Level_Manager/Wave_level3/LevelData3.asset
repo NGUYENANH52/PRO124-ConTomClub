@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc4a5c329d8b39f40bfb685ad6c5cdc3, type: 3}
-  m_Name: Wave1_5 1
+  m_Script: {fileID: 11500000, guid: cda511500f184d041b1902b6003b6420, type: 3}
+  m_Name: LevelData3
   m_EditorClassIdentifier: 
-  enemyTypes:
-  - {fileID: 11400000, guid: 4fe09270e7acdce49ae93d5022af84d8, type: 2}
-  enemyCounts: 01000000
-  spawnInterval: 2
+  experienceToLevelUp: 000000002c010000f4010000bc020000840300004c04000014050000dc050000a4060000080700006c070000

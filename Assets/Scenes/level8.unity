@@ -7847,12 +7847,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027471903}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0319, y: 0.993, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6889661, y: 0.8722743, z: -0.0389728}
   m_LocalScale: {x: 1.0306021, y: 0.9831826, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2035141197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1050134326
 GameObject:
@@ -9407,6 +9407,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2793226811337527041, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 47377f624416aa643b10011bf10dcf46, type: 2}
     - target: {fileID: 4376056343921265703, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
       propertyPath: _bullet
       value: 
@@ -12948,6 +12952,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1627932094}
+  - {fileID: 1027471905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046088332
@@ -13309,8 +13314,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
-  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
+  - {fileID: 11400000, guid: 1a35b30b2916df540a2facdc2945b1d0, type: 2}
+  - {fileID: 11400000, guid: fa7977c3e52a5a143b4827b8a692f221, type: 2}
+  - {fileID: 11400000, guid: 6cb0373a36027e74080d8377bebc1b66, type: 2}
+  - {fileID: 11400000, guid: 530a2ecca416f704698a205898621d3b, type: 2}
+  - {fileID: 11400000, guid: b2ad3cea76c1d634aa18382f43dbe8bf, type: 2}
+  - {fileID: 11400000, guid: b027bc97359906a438da6ea3645b477f, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
   timeBetweenWaves: 5
@@ -13708,4 +13717,3 @@ SceneRoots:
   - {fileID: 1940423672}
   - {fileID: 66352259}
   - {fileID: 1050134327}
-  - {fileID: 1027471905}
