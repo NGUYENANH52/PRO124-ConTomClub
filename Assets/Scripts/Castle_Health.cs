@@ -27,7 +27,7 @@ public class CastleHealth : MonoBehaviour
       
     private void UpdateHealthUI()
     {
-        healthSlider.value = (float)currentHealth ;
+        healthSlider.value = (float)currentHealth / health;
     }
 
     private void GameOver()
