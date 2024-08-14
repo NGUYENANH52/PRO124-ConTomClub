@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TableUpdate : MonoBehaviour
 {
     public GameObject Update;  // Màn hình chính cần cập nhật
-
+    //public GameObject Table;
     // Biến để kiểm tra xem có đang trong màn hình cài đặt hay không
     private bool isInSettings = false;
 
@@ -24,5 +24,19 @@ public class TableUpdate : MonoBehaviour
         {
             Time.timeScale = 1f;
         }*/
+    }    
+    public void ToggleTable()
+    {
+        bool isActive = Update.activeSelf;
+        Update.SetActive(!isActive);
+        if (!isActive)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
+
 }
