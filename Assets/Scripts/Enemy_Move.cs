@@ -159,9 +159,17 @@ public class EnemyMovement : MonoBehaviour
             slowDownEndTime = Time.time + duration;
 
             // Nếu có một Coroutine đang chạy, dừng nó lại
+            if (burnCoroutine != null)
+            {
+                StopCoroutine(burnCoroutine);
+            }
             if (slowCoroutine != null)
             {
                 StopCoroutine(slowCoroutine);
+            }
+            if (poisonCoroutine != null)
+            {
+                StopCoroutine(poisonCoroutine);
             }
             // Bắt đầu Coroutine làm chậm
             slowCoroutine = StartCoroutine(SlowDownCoroutine(duration));
@@ -206,6 +214,14 @@ public class EnemyMovement : MonoBehaviour
             {
                 StopCoroutine(burnCoroutine);
             }
+            if (slowCoroutine != null)
+            {
+                StopCoroutine(slowCoroutine);
+            }
+            if (poisonCoroutine != null)
+            {
+                StopCoroutine(poisonCoroutine);
+            }
             burnCoroutine = StartCoroutine(BurnDamageCoroutine());
             fireEffectSprite.transform.position = effectPosition.position;
             //Instantiate ra effect lửa
@@ -243,12 +259,12 @@ public class EnemyMovement : MonoBehaviour
 
         StopBurning(); // Kết thúc quá trình đốt
     }
-    public void StartPoison(float damagePercentage, float duration, float delay)
+    public void StartPoison(float damagePercentage, float poisonDuration, float delay, float slowDownPercentage, float slowDuration)
     {
         if (!isPoisoned)
         {
             poisonDamage = Mathf.RoundToInt(enemyData.health * damagePercentage);
-            poisonEndTime = Time.time + duration;
+            poisonEndTime = Time.time + poisonDuration;
             isPoisoned = true;
 
             // Dừng các hiệu ứng đốt và làm chậm hiện có để tránh xung đột
@@ -256,6 +272,14 @@ public class EnemyMovement : MonoBehaviour
             StopSlow();
 
             // Bắt đầu gây sát thương độc
+            if (burnCoroutine != null)
+            {
+                StopCoroutine(burnCoroutine);
+            }
+            if (slowCoroutine != null)
+            {
+                StopCoroutine(slowCoroutine);
+            }
             if (poisonCoroutine != null)
             {
                 StopCoroutine(poisonCoroutine);
@@ -268,13 +292,17 @@ public class EnemyMovement : MonoBehaviour
             currentPoisonEffect.transform.SetParent(effectPosition);
 
             // Áp dụng hiệu ứng làm chậm mà không hiển thị hiệu ứng băng
-            currentSpeed = enemyData.originalSpeed * (1 - bulletData.slowDownPercentage / 100f);
+            currentSpeed = enemyData.originalSpeed * (1 - slowDownPercentage / 100f);
             isSlowedDown = true;
-            slowDownEndTime = Time.time + bulletData.slowDownDuration;
+            slowDownEndTime = Time.time + slowDuration;
+            if (slowCoroutine != null)
+            {
+                StopCoroutine(slowCoroutine);
+            }
 
             // Áp dụng sát thương đốt nhưng không hiển thị hiệu ứng lửa
             burnDamage = Mathf.RoundToInt(enemyData.health * bulletData.burnDamagePercentage);
-            burnEndTime = Time.time + duration;
+            burnEndTime = Time.time + poisonDuration;
             isBurning = true;
             if (burnCoroutine != null)
             {

@@ -55,8 +55,7 @@ public class bulletScript : MonoBehaviour
                         break;
                     case BulletType.Poison_Bullet: // Đạn độc
                         enemy.TakeDamage(bulletData.damage);
-                        enemy.StartPoison(bulletData.poisonDamagePercentage, bulletData.poisonDuration, bulletData.poisonDelay);
-                        enemy.StartSlow(bulletData.slowDownPercentage, bulletData.slowDownDuration); // Thêm hiệu ứng làm chậm
+                        enemy.StartPoison(bulletData.poisonDamagePercentage, bulletData.poisonDuration, bulletData.poisonDelay, bulletData.slowDownPercentage, bulletData.slowDownDuration);
                         break;
                 }
             }

@@ -12,22 +12,17 @@ public class CastleHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = health;
-        UpdateHealthUI();
+        healthSlider.value = currentHealth;
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        UpdateHealthUI();
-        if (currentHealth <= 0)
+        healthSlider.value = currentHealth;
+        if (healthSlider.value <= 0)
         { 
             GameOver(); 
         }
        
-    }
-      
-    private void UpdateHealthUI()
-    {
-        healthSlider.value = (float)currentHealth / health;
     }
 
     private void GameOver()

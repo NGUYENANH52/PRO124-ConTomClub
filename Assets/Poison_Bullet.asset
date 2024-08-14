@@ -17,8 +17,8 @@ MonoBehaviour:
   lifetime: 2
   damage: 25
   expolsionEffect: {fileID: 517794104306580244, guid: 3775c865ffe20eb409f2ab1d10d81738, type: 3}
-  slowDownPercentage: 10
-  slowDownDuration: 0
+  slowDownPercentage: 20
+  slowDownDuration: 2
   burnDamagePercentage: 0
   burnDuration: 0
   burnDelay: 0
