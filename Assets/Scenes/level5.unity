@@ -4365,11 +4365,7 @@ MonoBehaviour:
   m_text: LOSE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c57628f5ece03340994a2542f326b0e, type: 2}
-<<<<<<< HEAD
   m_sharedMaterial: {fileID: -5269382461361804754, guid: 0c57628f5ece03340994a2542f326b0e, type: 2}
-=======
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
->>>>>>> 9c2ea489bba2420ffe85a5c0e5ba018e5b47d64f
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4432,7 +4428,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -5.002472, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &457677104
@@ -9098,7 +9094,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: WIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c57628f5ece03340994a2542f326b0e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9162,7 +9158,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -58.549683, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1377026287
@@ -9339,31 +9335,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 814072876904768233, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1404608160}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
---- !u!1 &1404608159 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 814072876904768233, guid: 04e53237b148e614dbbd326c1791bbe6, type: 3}
-  m_PrefabInstance: {fileID: 1404608158}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1404608160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404608159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c807934ab48c7b24daa3399161b7cc77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentExperience: 0
-  currentLevel: 1
-  levelData: {fileID: 11400000, guid: 266815abdf62a4548ac115a3bcf14ec7, type: 2}
 --- !u!1 &1425698312
 GameObject:
   m_ObjectHideFlags: 0
@@ -9794,11 +9767,7 @@ MonoBehaviour:
   m_text: PAUSE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c57628f5ece03340994a2542f326b0e, type: 2}
-<<<<<<< HEAD
   m_sharedMaterial: {fileID: -5269382461361804754, guid: 0c57628f5ece03340994a2542f326b0e, type: 2}
-=======
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
->>>>>>> 9c2ea489bba2420ffe85a5c0e5ba018e5b47d64f
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9861,7 +9830,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -58.549683, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1459302466
@@ -13198,14 +13167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 0f31de1437905d34aa4b0bb60214e7f9, type: 2}
-  - {fileID: 11400000, guid: 61da1bc21da88fd4a82d5d411feb4269, type: 2}
-  - {fileID: 11400000, guid: 253019b006d84754d9fe3ae2460860ee, type: 2}
-  - {fileID: 11400000, guid: 57e6c4c263dbc574bafe58ba27b8a242, type: 2}
-  - {fileID: 11400000, guid: 98146bdd9b61ac247a61229b95126530, type: 2}
+  - {fileID: 11400000, guid: d97f27e5c9bd54b4eaac272d2a068178, type: 2}
+  - {fileID: 11400000, guid: 0912dd5af5bdba84e8f8b779952de7dc, type: 2}
   spawnArea: {fileID: 2083249838}
   spawnAreaSize: {x: 5, y: 5}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 5
   Win: {fileID: 391428200}
 --- !u!4 &2083249838
 Transform:
