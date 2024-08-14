@@ -10,7 +10,6 @@ public class TableUpdate : MonoBehaviour
     {
         bool isActive = Update.activeSelf;
         Update.SetActive(!isActive);
-
         if (!isActive)
         {
             Time.timeScale = 0f;
