@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1469820430532225263}
   - component: {fileID: 7980093862937535431}
   - component: {fileID: 4376056343921265703}
-  - component: {fileID: 2793226811337527041}
   m_Layer: 7
   m_Name: Soldier
   m_TagString: Untagged
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.849, z: 0}
-  m_LocalScale: {x: 1.7159, y: 1.7159, z: 1.7159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1836492056383243383}
@@ -186,27 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae79f13071bec314bb9cdd6dc03d282b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMove: 0.005
+  _speedMove: 0.1
   _firePoint: {fileID: 1048288528146854782}
-  _atkSpeed: 0.15
+  _atkSpeed: 0.2
   _cooldown: 0
   bulletManager: {fileID: 0}
   BulletData: {fileID: 0}
---- !u!114 &2793226811337527041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814072876904768233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c807934ab48c7b24daa3399161b7cc77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentExperience: 0
-  currentLevel: 1
-  levelData: {fileID: 11400000, guid: d8073f0cb81116644a9d6c3c27eb3ae2, type: 2}
 --- !u!1 &1938066101877453966
 GameObject:
   m_ObjectHideFlags: 0

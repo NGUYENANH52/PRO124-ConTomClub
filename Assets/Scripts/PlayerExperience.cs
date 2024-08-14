@@ -3,25 +3,17 @@
 public class PlayerExperience : MonoBehaviour
 {
     public int currentExperience;
-    public int currentLevel = 1;
-    public LevelData levelData;
+    public int currentCoin;
 
     public void AddExperience(int amount)
     {
         currentExperience += amount;
+        // Cập nhật UI hoặc thực hiện các hành động khác khi nhận được EXP
         Debug.Log("Current EXP: " + currentExperience);
-
-        while (currentLevel < levelData.experienceToLevelUp.Length && currentExperience >= levelData.experienceToLevelUp[currentLevel])
-        {
-            LevelUp();
-        }
     }
+    //public void Coins(int amount) 
+    //{
+    //    currentCoin += amount;
 
-    void LevelUp()
-    {
-        currentExperience -= levelData.experienceToLevelUp[currentLevel];
-        currentLevel++;
-
-        Debug.Log("Level Up! New Level: " + currentLevel);
-    }
+    //}
 }
