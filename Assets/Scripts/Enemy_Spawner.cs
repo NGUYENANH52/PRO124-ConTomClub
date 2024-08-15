@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,10 +14,16 @@ public class EnemySpawner : MonoBehaviour
     private int remainingEnemies = 0; // so luong quai vat con trong game
     private EnemyData enemyData;
     private bool wavesCompleted = false;
+    public TMP_Text totalEnemyText ;
 
     void Start()
     {
         StartCoroutine(SpawnEnemies());
+        UpdateTotalEnemyUI();
+    }
+    private void Update()
+    {
+        UpdateTotalEnemyUI();
     }
 
     private IEnumerator SpawnEnemies()
@@ -98,6 +105,13 @@ public class EnemySpawner : MonoBehaviour
         {
             // Nếu không còn quái vật và tất cả các wave đã hoàn thành
             LoadWin();
+        }
+    }
+    private void UpdateTotalEnemyUI()
+    {
+        if (totalEnemyText != null)       
+        {
+            totalEnemyText.text = "Enemy Left: " + remainingEnemies;
         }
     }
     private void LoadWin()  
