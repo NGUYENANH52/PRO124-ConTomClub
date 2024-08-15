@@ -27,26 +27,25 @@ public class DangNhapTaiKhoan : MonoBehaviour
 
         if (!www.isDone)
         {
-            print("Kết nối không thành công");
+            print("Connection failed");
         }
         else if (www.isDone)
         {
             string get = www.downloadHandler.text;
             if (get == "empty")
             {
-                thongbao.text = "Tài khoản hoặc Mật khẩu không được để trống";
+                thongbao.text = "Account or Password cannot be empty";
             }
             else if (get == "" || get == null)
             {
-                thongbao.text = "Tài khoản hoặc Mật khẩu không chính xác";
+                thongbao.text = "Account or Password is incorrect";
             }
             else if (get.Contains("Lỗi"))
             {
-                thongbao.text = "Không kết nối được tới server";
+                thongbao.text = "Unable to connect to the server";
             }
             else
-            {
-                thongbao.text = "Đăng nhập thành công";
+            {              
                 PlayerPrefs.SetString("token", get);
                 SceneManager.LoadScene("GameMenu");
             }

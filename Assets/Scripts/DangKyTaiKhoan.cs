@@ -26,22 +26,22 @@ public class DangKyTaiKhoan : MonoBehaviour
 
         if (!www.isDone)
         {
-            print("Kết nối không thành công");
+            print("Connection failed");
         }
         else if (www.isDone)
         {
             string get = www.downloadHandler.text;
             if (get == "exist")
             {
-                thongbao.text = "Tài khoản đã tồn tại";
+                thongbao.text = "Account already exists";
             }
             else if (get == "ERROR")
             {
-                thongbao.text = "Đăng ký không thành công";
+                thongbao.text = "Registration failed";
             }
             else
             {
-                thongbao.text = "Đăng nhập tài khoản thành công";
+                
                 SceneManager.LoadScene(0);
             }
             
