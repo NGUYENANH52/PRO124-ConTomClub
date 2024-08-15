@@ -41,8 +41,8 @@ public class DangKyTaiKhoan : MonoBehaviour
             }
             else
             {
-                
-                SceneManager.LoadScene(0);
+                thongbao.text = "Account registration successful";
+                //SceneManager.LoadScene(0);
             }
             
             
