@@ -1,49 +1,69 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using TMPro;
 
 public class bulletScript : MonoBehaviour
 {
-    public float _speed;
-    public float _lifeTime;
-    public GameObject _effectBullet;
-    Rigidbody2D _rb;
+    public float speed;
+    public float lifeTime;
+    public GameObject effectBullet;
+    public int _damage; // Biến lưu trữ sát thương của viên đạn
+    public ScoreManager scoreManager; // Thêm biến ScoreData
+    public TMP_Text scoreText; // Thêm biến TMP_Text để hiển thị điểm số
+    Rigidbody2D rb;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //Check va cham
-        _rb = GetComponent<Rigidbody2D>();
-
-        //Time to destroy Bullet 
-        Destroy(this.gameObject, _lifeTime);
+        rb = GetComponent<Rigidbody2D>();
+        Destroy(this.gameObject, lifeTime);
+        if (scoreManager != null)
+        {
+            scoreManager = FindObjectOfType<ScoreManager>();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Bullet move
-        _rb.velocity = transform.up * _speed * Time.deltaTime;
+        rb.velocity = transform.up * speed * Time.deltaTime;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Va chạm phát hiện với: " + other.gameObject.name);
+
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //Destroy Bullet
+            Debug.Log("Va chạm với quái!");
+
+            // Gây sát thương cho quái
+            EnemyMovement enemy = other.GetComponent<EnemyMovement>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(_damage);
+                // Nếu quái vật bị tiêu diệt, cộng thêm điểm và cập nhật UI
+                if (enemy.IsDead() && scoreManager != null)
+                {
+                    scoreManager.AddScore(1);
+                    UpdateScoreUI();
+                }
+            }
+         
+
             Destroy(this.gameObject);
-
-            //Instan Effect (Explore)
-            GameObject effectExplore = Instantiate(_effectBullet, transform.position, Quaternion.identity);
-
-            //Destroy Explore
+            GameObject effectExplore = Instantiate(effectBullet, transform.position, Quaternion.identity);
             Destroy(effectExplore, 0.1f);
 
-            //Find & destroy enemy
-            /*var name = other.attachedRigidbody.name;
-            Destroy(GameObject.Find(name), 0f);*/
-
+          
+        }
+    }
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null && scoreManager != null)
+        {
+            scoreText.text = "Điểm: " + scoreManager.scoreData.score ;
         }
     }
 }
